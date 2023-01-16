@@ -1,6 +1,8 @@
 package lesson225;
 
+import java.text.SimpleDateFormat;
 import java.time.*;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -12,27 +14,65 @@ public class MainDateLesson {
         long time = System.currentTimeMillis(); //время начала выполнения кода ниже, задание 3
         long timeForDate = System.currentTimeMillis();
         Date birthDate = new Date("Feb 17 10:00:00 1996");
-        System.out.println("ДР с помощью класса Date: " + birthDate);
+        System.out.println("Date: ДР в формате dd-MM-yyyy: " + new SimpleDateFormat("dd-MM-yyyy").format(birthDate));
+        System.out.println("Date: ДР в формате yyyy-MM-dd: " + new SimpleDateFormat("yyyy-MM-dd").format(birthDate));
+        System.out.println("Date: ДР в формате dd-MM-yyyy HH:mm: " + new SimpleDateFormat("dd-MM-yyyy HH:mm").format(birthDate));
+        System.out.println("Date: ДР в формате dd-MM-yyyy HH:mm:ss: " + new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(birthDate));
+        System.out.println("Date: ДР в формате dd-MM-yyyy HH:mm:ss Z: " + new SimpleDateFormat("dd-MM-yyyy HH:mm:ss Z").format(birthDate));
         System.out.printf("Время выполнения класса Date - %s ms \n", System.currentTimeMillis() - timeForDate); //задание 4
 
         long timeForLocalDate = System.currentTimeMillis();
-        LocalDate birthDate1 = LocalDate.of(1996, 2, 17);
-        System.out.println("ДР с помощью класса: " + birthDate1);
+        String date = "1996-02-17";
+        LocalDate birthDate1 = LocalDate.parse(date);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("dd-MMMM-yyyy");
+        DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("dd-MMM-yy");
+        DateTimeFormatter formatter3 = DateTimeFormatter.ofPattern("y/M/d");
+        System.out.println("LocalDate: ДР в формате yyyy-MM-dd: " + birthDate1);
+        System.out.println("LocalDate: ДР в формате dd-MM-yyyy: " + formatter.format(birthDate1));
+        System.out.println("LocalDate: ДР в формате dd-MMMM-yyyy: " + formatter1.format(birthDate1));
+        System.out.println("LocalDate: ДР в формате dd-MMM-yy: " + formatter2.format(birthDate1));
+        System.out.println("LocalDate: ДР в формате dd-MMM-yy: " + formatter3.format(birthDate1));
         System.out.printf("Время выполнения класса LocalDate - %s ms \n", System.currentTimeMillis() - timeForLocalDate); //задание 4
 
         long timeForLocalDateTime = System.currentTimeMillis();
-        LocalDateTime birthDate2 = LocalDateTime.of(1996, 2, 17, 10, 0, 0);
-        System.out.println("ДР с помощью класса LocalDateTime: " + birthDate2);
+        String date1 = "1996-02-17T10:00:00";
+        LocalDateTime birthDate2 = LocalDateTime.parse(date1);
+        DateTimeFormatter formatter4 = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
+        DateTimeFormatter formatter5 = DateTimeFormatter.ofPattern("dd-MMMM-yyyy HH:mm:ss");
+        DateTimeFormatter formatter6 = DateTimeFormatter.ofPattern("dd-MMM-yy E");
+        DateTimeFormatter formatter7 = DateTimeFormatter.ofPattern("y/M/d EEEE");
+        System.out.println("LocalDateTime: ДР в формате yyyy-MM-ddTHH:mm:ss: " + birthDate2);
+        System.out.println("LocalDateTime: ДР в формате dd-MM-yyyy HH:mm: " + formatter4.format(birthDate2));
+        System.out.println("LocalDateTime: ДР в формате dd-MM-yyyy HH:mm:ss: " + formatter5.format(birthDate2));
+        System.out.println("LocalDateTime: ДР в формате dd-MM-yyyy E: " + formatter6.format(birthDate2));
+        System.out.println("LocalDateTime: ДР в формате dd-MM-yyyy EEEE: " + formatter7.format(birthDate2));
         System.out.printf("Время выполнения класса LocalDateTime - %s ms \n", System.currentTimeMillis() - timeForLocalDateTime); //задание 4
 
         long timeForZonedDateTime = System.currentTimeMillis();
         ZonedDateTime birthDate3 = ZonedDateTime.parse("1996-02-17T07:00:00Z[Europe/Moscow]");
-        System.out.println("ДР с помощью класса ZonedDateTime: " + birthDate3);
+        DateTimeFormatter formatter8 = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm z");
+        DateTimeFormatter formatter9 = DateTimeFormatter.ofPattern("dd-MMMM-yyyy HH:mm a");
+        DateTimeFormatter formatter10 = DateTimeFormatter.ofPattern("dd-MMM-yy W E");
+        DateTimeFormatter formatter11 = DateTimeFormatter.ofPattern("y/MM/d EEEE");
+        System.out.println("ZonedDateTime: ДР в формате yyyy-MM-ddTHH:mm:ss: " + birthDate3);
+        System.out.println("ZonedDateTime: ДР в формате dd-MM-yyyy HH:mm z: " + formatter8.format(birthDate3));
+        System.out.println("ZonedDateTime: ДР в формате dd-MM-yyyy HH:mm AM: " + formatter9.format(birthDate3));
+        System.out.println("ZonedDateTime: ДР в формате dd-MM-yyyy W E: " + formatter10.format(birthDate3));
+        System.out.println("ZonedDateTime: ДР в формате y/MM/d EEEE: " + formatter11.format(birthDate3));
         System.out.printf("Время выполнения класса ZonedDateTime - %s ms \n", System.currentTimeMillis() - timeForZonedDateTime); //задание 4
 
         long timeForCalendar = System.currentTimeMillis();
-        Calendar birthDate4 = new GregorianCalendar(1996, 1, 17);
-        System.out.println("ДР с помощью класса Calendar: " + birthDate4.getTime());
+        Calendar birthDate4 = new GregorianCalendar(1996, 1, 17, 10, 0, 0);
+        SimpleDateFormat formatter12 = new SimpleDateFormat("dd-MM-yyyy HH:mm z");
+        SimpleDateFormat formatter13 = new SimpleDateFormat("dd-MMMM-yyyy HH:mm a");
+        SimpleDateFormat formatter14 = new SimpleDateFormat("dd-MMM-yy W E");
+        SimpleDateFormat formatter15 = new SimpleDateFormat("y/MM/d EEEE");
+        System.out.println("GregorianCalendar: ДР в формате E MM dd HH:mm:ss z yyyy: " + birthDate4.getTime());
+        System.out.println("GregorianCalendar: ДР в формате dd-MM-yyyy HH:mm z: " + formatter12.format(birthDate4.getTime()));
+        System.out.println("GregorianCalendar: ДР в формате dd-MMMM-yyyy HH:mm a: " + formatter13.format(birthDate4.getTime()));
+        System.out.println("GregorianCalendar: ДР в формате dd-MMM-yy W E: " + formatter14.format(birthDate4.getTime()));
+        System.out.println("GregorianCalendar: ДР в формате y/MM/d EEEE: " + formatter15.format(birthDate4.getTime()));
         System.out.printf("Время выполнения класса Calendar - %s ms \n", System.currentTimeMillis() - timeForCalendar); //задание 4
         System.out.printf("Alltime - %s ms \n", System.currentTimeMillis() - time); //подсчет времени выполнения кода, задание 3
 
@@ -57,13 +97,11 @@ public class MainDateLesson {
 
         System.out.printf("Разница для класса LocalDate: \n" +
                         "Количество лет: %d \n" +
-                        "Количество дней: %d \n" +
-                        "Количество часов: %d \n" +
-                        "Количество минут: %d \n",
+                        "Количество месяцев: %d \n" +
+                        "Количество дней: %d \n",
                 durationLocalDate.abs().toDays() / 365,
-                durationLocalDate.abs().toDays() % 365,
-                durationLocalDate.abs().toHours() % 24,
-                durationLocalDate.abs().toMinutes() % 60
+                durationLocalDate.abs().toDays() % 365 / 30,
+                durationLocalDate.abs().toDays() % 365 % 30
         );
 
         //разница для класса LocalDateTime
@@ -72,13 +110,11 @@ public class MainDateLesson {
 
         System.out.printf("Разница для класса LocalDateTime: \n" +
                         "Количество лет: %d \n" +
-                        "Количество дней: %d \n" +
-                        "Количество часов: %d \n" +
-                        "Количество минут: %d \n",
+                        "Количество месяцев: %d \n" +
+                        "Количество дней: %d \n",
                 duration.abs().toDays() / 365,
-                duration.abs().toDays() % 365,
-                duration.abs().toHours() % 24,
-                duration.abs().toMinutes() % 60
+                duration.abs().toDays() % 365 / 30,
+                duration.abs().toDays() % 365 % 30
         );
 
         //разница для класса ZonedDateTime
@@ -87,52 +123,25 @@ public class MainDateLesson {
 
         System.out.printf("Разница для класса ZonedDateTime: \n" +
                         "Количество лет: %d \n" +
-                        "Количество дней: %d \n" +
-                        "Количество часов: %d \n" +
-                        "Количество минут: %d \n",
+                        "Количество месяцев: %d \n" +
+                        "Количество дней: %d \n",
                 durationZonedDateTime.abs().toDays() / 365,
-                durationZonedDateTime.abs().toDays() % 365,
-                durationZonedDateTime.abs().toHours() % 24,
-                durationZonedDateTime.abs().toMinutes() % 60
+                durationZonedDateTime.abs().toDays() % 365 / 30,
+                durationZonedDateTime.abs().toDays() % 365 % 30
         );
 
 //        разница для класса GregorianCalendar
-//        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Calendar calendarNow = GregorianCalendar.getInstance();
-        int calYear = calendarNow.get(Calendar.YEAR);
-        int calMonth = calendarNow.get(Calendar.MONTH) + 1;
-        int calDay = calendarNow.get(Calendar.DAY_OF_YEAR);
-        int calYear1 = birthDate4.get(Calendar.YEAR);
-        int calMonth1 = birthDate4.get(Calendar.MONTH) + 1;
-        int calDay1 = birthDate4.get(Calendar.DAY_OF_YEAR);
-        System.out.printf("Разница для класса GregorianCalendar: \n" + "Количество лет: %d \n" +
+
+        long dateDiff = calendarNow.getTimeInMillis() - birthDate4.getTimeInMillis();
+
+        System.out.printf("Разница для класса Calendar: \n" +
+                        "Количество лет: %d \n" +
                         "Количество месяцев: %d \n" +
                         "Количество дней: %d \n",
-                calYear - calYear1,
-                calMonth - calMonth1,
-                calDay - calDay1);
-//        System.out.println("monthDiff " + monthDiff(calYear, calYear1, calMonth, calMonth1, calDay, calDay1));
+                dateDiff / 31536000000L,
+                dateDiff % 31536000000L / 2678400000L,
+                dateDiff % 31536000000L % 2678400000L / 86400000
+        );
     }
-
-//    public static int monthDiff(int startYear, int endYear, int startMonth, int endMonth, int startDay, int endDay) {
-//        int dayDiff;
-//        int monthDiff;
-//        if (startDay > endDay) {
-//            dayDiff = startDay - endDay;
-//            return dayDiff;
-//        } else if (startDay < endDay) {
-//            startMonth -= 1;
-//            dayDiff = startDay + 30 - endDay;
-//            return dayDiff;
-//            }
-//        if (startMonth > endMonth) {
-//            monthDiff = startMonth - endMonth;
-//            return monthDiff;
-//        } else if (startMonth < endMonth) {
-//            startYear -= 1;
-//            monthDiff = startMonth + 12 - endMonth;
-//            return monthDiff;
-//        }
-//        return startYear - endYear;
-//    }
 }
