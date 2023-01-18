@@ -25,7 +25,7 @@ public class Main {
 
         //Задание 4
         int p = Integer.parseInt(args[2]);
-        float r = Integer.parseInt(args[3]);
+        float r = Float.parseFloat(args[3]);
         int t = Integer.parseInt(args[4]);
         double sum = p * Math.exp(r * t);
         System.out.printf("Через %s лет вы получите %s рублей \n", t, sum);
