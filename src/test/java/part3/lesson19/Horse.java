@@ -1,23 +1,16 @@
 package part3.lesson19;
 
 public class Horse extends Animal {
-    private String sound;
-    private String name;
-    private String location;
-    private int counter;
-    private String health;
-    private int foodCounter;
-    private int howMuchAnimalEats;
+    private static int animalTypeCounter;
 
-    public Horse(String name, String food, int foodCounter, String location, int counter, String health) {
-        super(name, food, foodCounter, location, counter, health);
+    public Horse(String name, String food, int foodCounter, String location, HealthState health, String sound) {
+        super(name, food, foodCounter, location, health, sound);
+        animalTypeCounter++;
+        System.out.println("Количество особей лошадей: " + animalTypeCounter);
     }
 
     @Override
-    public void eat(int foodCounter, int howMuchAnimalEats, String name) {
-        this.foodCounter = foodCounter;
-        this.howMuchAnimalEats = howMuchAnimalEats;
-        this.name = name;
+    public void eat(int howMuchAnimalEats) {
         System.out.printf("%s ест \n", name);
         foodCounter = foodCounter - howMuchAnimalEats;
         System.out.printf("Еды осталось %s кг \n", foodCounter);
@@ -25,9 +18,13 @@ public class Horse extends Animal {
     }
 
     @Override
-    public void makeSound(String sound) {
-        this.sound = sound;
+    public void makeSound() {
         System.out.println("Лошадь говорит " + sound);
+    }
+
+    @Override
+    public void sleep() {
+        System.out.printf("%s спит \n", name);
     }
 
     @Override
