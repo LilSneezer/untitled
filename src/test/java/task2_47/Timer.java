@@ -1,5 +1,9 @@
 package task2_47;
 
+
+import java.util.Date;
+
+
 public class Timer {
     private int seconds;
 
@@ -12,13 +16,9 @@ public class Timer {
     }
 
     public static void waitSecond() {
-        for (int i = 1; i != 0; i--) {
-            try {
-                Thread.sleep(1000);
-            } catch(InterruptedException ex) {
-                System.out.println(ex.getMessage());
-            }
-        }
+
+        long startTime = new Date().getTime();
+        while (new Date().getTime() - startTime < 1000L){}
     }
 
     public String printTime() {

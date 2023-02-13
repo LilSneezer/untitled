@@ -1,32 +1,26 @@
 package task2_47;
 
-import java.util.Random;
 
 public class Issue4 {
     public static void main(String[] args) {
-        int n = 20;
-        for (int i = 2; i < n; i++) {
-            int randInt = nextInt(i);
-            if (randInt < 2)
-                System.out.printf("Число %s не может быть простым, т.к. минимальное просто число 2 \n", randInt);
-            else
-            if (isPrime(randInt)) {
-                System.out.printf("%s простое число \n", randInt);
-                break;
-            }
-        }
+        int n = 50;
+        int random;
+        do {
+            random = nextInt(n);
+            System.out.println("Поиск простого числа: " + random);
+        } while (!isPrime(random));
+        System.out.println("Простое число найдено " + random);
     }
 
     public static int nextInt(int x) {
-        Random random = new Random();
-        return random.nextInt(x);
+        return 2 + (int) (Math.random() * x);
     }
 
-    public static boolean isPrime(int randInt) {
+    public static boolean isPrime(int random) {
         int mod;
         int i = 2;
-        while (i >= 2 && i <= randInt / 2) {
-            mod = randInt % i;
+        while (i >= 2 && i <= random / 2) {
+            mod = random % i;
             if (mod == 0)
                 return false;
             else
