@@ -16,11 +16,7 @@ public class Cargo {
         this.fruit.add(fruit);
     }
 
-    public ArrayList<Fruit> getFruit() {
-        return fruit;
-    }
-
-    public double getWeight(ArrayList<Fruit> fruit) {
+    public double getWeight() {
         double commonWeight = 0;
         for (Fruit fruitToCountWeight: fruit) {
             commonWeight += fruitToCountWeight.getWeight();
@@ -28,11 +24,17 @@ public class Cargo {
         return commonWeight;
     }
 
-    public BigDecimal getPrice(ArrayList<Fruit> fruit) {
-        BigDecimal commonPrice = new BigDecimal("0");
+    public BigDecimal getPrice() {
+        BigDecimal commonPrice = BigDecimal.ZERO;
         for (Fruit fruiToCountPrice: fruit) {
             commonPrice = commonPrice.add(fruiToCountPrice.getPrice());
         }
         return commonPrice;
+    }
+
+    @Override
+    public String toString() {
+        return "Общий вес: " + getWeight() + "\n" +
+                "Общая стоимость: " + getPrice();
     }
 }

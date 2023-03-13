@@ -7,8 +7,5 @@ public class Apple extends Fruit {
 
     public Apple(double weight, BigDecimal price, String name) {
         super(weight, price, name);
-        this.weight = weight;
-        this.price = price;
-        this.name = name;
     }
 }

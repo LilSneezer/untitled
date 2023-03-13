@@ -22,6 +22,7 @@ public class FruitCatalogue {
         do {
             if (fruit[i].getName().equals(fruitToFind)) {
                 foundFruit = fruit[i];
+                break;
             }
             i++;
         } while (i < fruit.length);

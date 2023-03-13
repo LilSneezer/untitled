@@ -2,7 +2,6 @@ package task2_66.com.fruitbase;
 
 
 import task2_66.com.fruitbase.fruits.Fruit;
-import java.math.BigDecimal;
 
 public class FruitBase {
     private FruitCatalogue fruitCatalogue;
@@ -12,8 +11,6 @@ public class FruitBase {
     }
 
     public String takeOrder(String[] fruitsFromOrder) {
-        double commonWeight;
-        BigDecimal commonPrice;
         Fruit foundFruit;
         Cargo cargo = new Cargo();
         for (int i = 0; i < fruitsFromOrder.length; i++) {
@@ -22,11 +19,7 @@ public class FruitBase {
                 cargo.addFruit(foundFruit);
             }
         }
-
-        commonWeight = cargo.getWeight(cargo.getFruit());
-        commonPrice = cargo.getPrice(cargo.getFruit());
-
-        return "Общий вес: " + commonWeight + "\n" + "Общая стоимость: " + commonPrice;
+        return cargo.toString();
     }
 
     public static void main(String[] args) {
