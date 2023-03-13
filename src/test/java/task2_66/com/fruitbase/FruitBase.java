@@ -10,7 +10,7 @@ public class FruitBase {
         fruitCatalogue = new FruitCatalogue();
     }
 
-    public String takeOrder(String[] fruitsFromOrder) {
+    public Cargo takeOrder(String[] fruitsFromOrder) {
         Fruit foundFruit;
         Cargo cargo = new Cargo();
         for (int i = 0; i < fruitsFromOrder.length; i++) {
@@ -19,11 +19,15 @@ public class FruitBase {
                 cargo.addFruit(foundFruit);
             }
         }
-        return cargo.toString();
+        return cargo;
     }
 
     public static void main(String[] args) {
         FruitBase fruitBase = new FruitBase();
-        System.out.println(fruitBase.takeOrder(args));
+        if (args.length == 0) {
+            System.exit(1);
+        } else {
+            System.out.println(fruitBase.takeOrder(args));
+        }
     }
 }
