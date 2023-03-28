@@ -21,13 +21,4 @@ public class FruitBase {
         }
         return cargo;
     }
-
-    public static void main(String[] args) {
-        FruitBase fruitBase = new FruitBase();
-        if (args.length == 0) {
-            System.exit(1);
-        } else {
-            System.out.println(fruitBase.takeOrder(args));
-        }
-    }
 }

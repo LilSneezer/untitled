@@ -8,8 +8,8 @@ public class FruitCatalogue {
     private Fruit[] fruit;
 
     FruitCatalogue() {
-        Apple apple = new Apple(10.0, new BigDecimal("200"), "Apple");
-        Banana banana = new Banana(15.0, new BigDecimal("300"), "Banana");
+        Apple apple = new Apple(10.0, new BigDecimal("200"), "Apple", Freshness.OVERRIPED);
+        Banana banana = new Banana(15.0, new BigDecimal("300"), "Banana", Freshness.SPOILED);
         Orange orange = new Orange(20.0, new BigDecimal("150"), "Orange");
         Pineapple pineapple = new Pineapple(25.0, new BigDecimal("350"), "Pineapple");
 
