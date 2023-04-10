@@ -8,10 +8,8 @@ public abstract class Customer {
     protected ArrayList<Fruit> purchases;
     protected String name;
 
-    Cargo cargo = new Cargo();
-
     Customer(String name) {
-        purchases = cargo.getFruits();
+        purchases = new ArrayList<>();
         this.name = name;
     }
 
@@ -19,13 +17,13 @@ public abstract class Customer {
         return this.name;
     }
 
-    public abstract ArrayList<Fruit> takeFruits(ArrayList<Fruit> purchases);
+    public abstract void takeFruits(Cargo cargo);
 
-    public String printPurchases(ArrayList<Fruit> purchases) {
+    public void printPurchases() {
         String fruits = "";
         for (Fruit fruit: purchases) {
             fruits += fruit.getName() + " ";
         }
-        return fruits;
+        System.out.println(fruits);
     }
 }

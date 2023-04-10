@@ -20,13 +20,13 @@ public class Cargo {
         return fruit;
     }
 
-    public ArrayList<Fruit> removeFruit(Fruit fruitName) {
-        if (!fruit.contains(fruitName)) {
-            System.exit(0);
+    public Fruit removeFruit(Fruit fruitToRemove) {
+        if (!fruit.contains(fruitToRemove)) {
+            return null;
         } else {
-            fruit.remove(fruitName);
+            fruit.remove(fruitToRemove);
         }
-        return fruit;
+        return fruitToRemove;
     }
 
     public double getWeight() {

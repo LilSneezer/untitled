@@ -12,18 +12,18 @@ public class Pineapple extends Fruit {
         super(weight, price, name, freshness);
     }
 
-    @Override
-    public boolean isFresh() {
-        return freshness == Freshness.FRESH;
-    }
+//    @Override
+//    public boolean isFresh() {
+//        return freshness == Freshness.FRESH;
+//    }
 
-    @Override
-    public boolean equals(Object obj) {
-        return obj != null && obj.getClass() == this.getClass();
-    }
-
-    @Override
-    public int hashCode() {
-        return 0;
-    }
+//    @Override
+//    public boolean equals(Object obj) {
+//        return obj != null && obj.getClass() == this.getClass();
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return 0;
+//    }
 }

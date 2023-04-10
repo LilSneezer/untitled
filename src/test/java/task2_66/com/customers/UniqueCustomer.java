@@ -1,8 +1,7 @@
 package task2_66.com.customers;
 
 
-import task2_66.com.fruitbase.fruits.Fruit;
-import java.util.ArrayList;
+import task2_66.com.fruitbase.Cargo;
 
 public class UniqueCustomer extends Customer {
 
@@ -10,19 +9,16 @@ public class UniqueCustomer extends Customer {
         super(name);
     }
 
-    ArrayList<Fruit> uniqueFruits = new ArrayList<>();
-
-    public ArrayList<Fruit> takeFruits(ArrayList<Fruit> purchases) {
+    public void takeFruits(Cargo cargo) {
         int i = 0;
-        while (i < purchases.size()) {
-            if (uniqueFruits.contains(purchases.get(i))) {
+        while (i < cargo.getFruits().size()) {
+            if (purchases.contains(cargo.getFruits().get(i))) {
                 i++;
             } else {
-                uniqueFruits.add(purchases.get(i));
-//                purchases = cargo.removeFruit(purchases.get(i));
+                purchases.add(cargo.getFruits().get(i));
+                cargo.removeFruit(cargo.getFruits().get(i));
             }
             i++;
         }
-        return uniqueFruits;
     }
 }
