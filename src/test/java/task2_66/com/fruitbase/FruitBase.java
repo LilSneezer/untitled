@@ -3,8 +3,11 @@ package task2_66.com.fruitbase;
 
 import task2_66.com.fruitbase.fruits.Fruit;
 
-public class FruitBase {
+import java.io.*;
+
+public class FruitBase implements Serializable {
     private FruitCatalogue fruitCatalogue;
+    private static final long serialVersionUID = 1L;
 
     FruitBase() {
         fruitCatalogue = new FruitCatalogue();
@@ -20,5 +23,28 @@ public class FruitBase {
             }
         }
         return cargo;
+    }
+
+    public void exportCatalogue() throws IOException {
+        FileOutputStream fileOutputStream = new FileOutputStream("/Users/andrey/Desktop/сериализация/fruitCatalog.ser");
+        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+
+        objectOutputStream.writeObject(fruitCatalogue);
+        objectOutputStream.close();
+        System.out.println("каталог экспортирован");
+    }
+
+    public void importCatalogue() throws IOException, ClassNotFoundException {
+        FileInputStream fileInputStream = new FileInputStream("/Users/andrey/Desktop/сериализация/fruitCatalog.ser");
+        ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+
+        fruitCatalogue = (FruitCatalogue) objectInputStream.readObject();
+        System.out.println("Импортированный каталог: \n" + fruitCatalogue);
+        System.out.println("каталог импортирован");
+    }
+
+    @Override
+    public String toString() {
+        return "Каталог - " + fruitCatalogue;
     }
 }

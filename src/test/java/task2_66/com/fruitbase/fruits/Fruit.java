@@ -1,10 +1,11 @@
 package task2_66.com.fruitbase.fruits;
 
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Objects;
 
-public abstract class Fruit {
+public abstract class Fruit implements Serializable {
     protected double weight;
     protected BigDecimal price;
     protected String name;
@@ -59,5 +60,12 @@ public abstract class Fruit {
 
     public boolean isFresh() {
         return freshness == Freshness.FRESH;
+    }
+
+    @Override
+    public String toString() {
+        return "\nНазвание: " + name + "\n" +
+                "Вес: " + weight + "\n" +
+                "Цена: " + price + "\n";
     }
 }
