@@ -2,13 +2,14 @@ package task3_10;
 
 
 public class NatureElement {
-    private String name;
+    protected String name;
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
-    public void connect(NatureElement natureElement) {
+    public NatureElement connect(NatureElement otherNatureElement) {
+        return null;
     }
 
     public static NatureElement create(String baseElemName) {
@@ -25,5 +26,9 @@ public class NatureElement {
                 System.out.println("Неизвестный элемент");
                 return null;
         }
+    }
+
+    public String toString() {
+        return name;
     }
 }
