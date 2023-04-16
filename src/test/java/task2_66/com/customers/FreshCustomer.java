@@ -13,8 +13,9 @@ public class FreshCustomer extends Customer {
         for (int i = 0; i < cargo.getFruits().size(); i++) {
             if (cargo.getFruits().get(i).isFresh()) {
                 purchases.add(cargo.getFruits().get(i));
-                cargo.removeFruit(cargo.getFruits().get(i));
             }
         }
+
+        actualizeCargo(purchases, cargo);
     }
 }

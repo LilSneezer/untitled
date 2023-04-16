@@ -1,5 +1,6 @@
 package task2_66.com.customers;
 
+
 import task2_66.com.fruitbase.Cargo;
 import task2_66.com.fruitbase.fruits.Fruit;
 import java.util.ArrayList;
@@ -18,6 +19,12 @@ public abstract class Customer {
     }
 
     public abstract void takeFruits(Cargo cargo);
+
+    public static void actualizeCargo(ArrayList<Fruit> purchases, Cargo cargo) {
+        for (int i = 0; i < purchases.size(); i++) {
+            cargo.removeFruit(purchases.get(i));
+        }
+    }
 
     public void printPurchases() {
         String fruits = "";

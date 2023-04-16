@@ -45,7 +45,8 @@ public abstract class Fruit implements Serializable {
                 obj.getClass() == this.getClass() &&
                 (Objects.equals(this.name, fruitObj.name)) &&
                 this.weight == fruitObj.weight &&
-                (Objects.equals(this.price, fruitObj.price));
+                (Objects.equals(this.price, fruitObj.price)) &&
+                (Objects.equals(this.freshness, fruitObj.freshness));
     }
 
     @Override
@@ -55,6 +56,7 @@ public abstract class Fruit implements Serializable {
         result = prime * result + (int) weight;
         result = prime * result + (price != null ? price.hashCode() : 0);
         result = prime * result + (name != null ? name.hashCode() : 0);
+        result = prime * result + (freshness != null ? freshness.hashCode() : 0);
         return result;
     }
 

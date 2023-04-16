@@ -12,13 +12,12 @@ public class UniqueCustomer extends Customer {
     public void takeFruits(Cargo cargo) {
         int i = 0;
         while (i < cargo.getFruits().size()) {
-            if (purchases.contains(cargo.getFruits().get(i))) {
-                i++;
-            } else {
+            if (!purchases.contains(cargo.getFruits().get(i))) {
                 purchases.add(cargo.getFruits().get(i));
-                cargo.removeFruit(cargo.getFruits().get(i));
             }
             i++;
         }
+
+        actualizeCargo(purchases, cargo);
     }
 }

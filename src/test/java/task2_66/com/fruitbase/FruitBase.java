@@ -5,9 +5,8 @@ import task2_66.com.fruitbase.fruits.Fruit;
 
 import java.io.*;
 
-public class FruitBase implements Serializable {
+public class FruitBase {
     private FruitCatalogue fruitCatalogue;
-    private static final long serialVersionUID = 1L;
 
     FruitBase() {
         fruitCatalogue = new FruitCatalogue();
@@ -26,7 +25,7 @@ public class FruitBase implements Serializable {
     }
 
     public void exportCatalogue() throws IOException {
-        FileOutputStream fileOutputStream = new FileOutputStream("/Users/andrey/Desktop/сериализация/fruitCatalog.ser");
+        FileOutputStream fileOutputStream = new FileOutputStream("fruitCatalog.ser");
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
 
         objectOutputStream.writeObject(fruitCatalogue);
@@ -35,7 +34,7 @@ public class FruitBase implements Serializable {
     }
 
     public void importCatalogue() throws IOException, ClassNotFoundException {
-        FileInputStream fileInputStream = new FileInputStream("/Users/andrey/Desktop/сериализация/fruitCatalog.ser");
+        FileInputStream fileInputStream = new FileInputStream("fruitCatalog.ser");
         ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
 
         fruitCatalogue = (FruitCatalogue) objectInputStream.readObject();
