@@ -2,6 +2,7 @@ package task2_66.com.customers;
 
 
 import task2_66.com.fruitbase.Cargo;
+import task2_66.com.fruitbase.Delivery;
 
 public class FreshCustomer extends Customer {
 
@@ -9,7 +10,7 @@ public class FreshCustomer extends Customer {
         super(name);
     }
 
-    public void takeFruits(Cargo cargo) {
+    public void takeFruits(Delivery cargo) {
         for (int i = 0; i < cargo.getFruits().size(); i++) {
             if (cargo.getFruits().get(i).isFresh()) {
                 purchases.add(cargo.getFruits().get(i));
