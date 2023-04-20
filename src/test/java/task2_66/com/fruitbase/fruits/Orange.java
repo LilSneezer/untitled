@@ -8,4 +8,7 @@ public class Orange extends Fruit {
     public Orange(double weight, BigDecimal price, String name) {
         super(weight, price, name);
     }
+    public Orange(double weight, BigDecimal price, String name, Freshness freshness) {
+        super(weight, price, name, freshness);
+    }
 }

@@ -8,12 +8,25 @@ import java.util.ArrayList;
 public class Cargo {
     private ArrayList<Fruit> fruit;
 
-    Cargo() {
+    public Cargo() {
         this.fruit = new ArrayList<>();
     }
 
     void addFruit(Fruit fruit) {
         this.fruit.add(fruit);
+    }
+
+    public ArrayList<Fruit> getFruits() {
+        return fruit;
+    }
+
+    public Fruit removeFruit(Fruit fruitToRemove) {
+        if (!fruit.contains(fruitToRemove)) {
+            return null;
+        } else {
+            fruit.remove(fruitToRemove);
+        }
+        return fruitToRemove;
     }
 
     public double getWeight() {
@@ -34,7 +47,7 @@ public class Cargo {
 
     @Override
     public String toString() {
-        return "Общий вес: " + getWeight() + "\n" +
-                "Общая стоимость: " + getPrice();
+        return "-Общий вес: " + getWeight() + "\n" +
+                "-Общая стоимость: " + getPrice();
     }
 }
