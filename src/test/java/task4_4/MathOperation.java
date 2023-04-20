@@ -13,6 +13,7 @@ public class MathOperation {
 
         if (numbers.size() == 0) {
             System.out.println("Не переданы числа для операции.");
+            System.exit(1);
         }
 
         String operationName = checkOperationName(args);

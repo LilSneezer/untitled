@@ -4,7 +4,6 @@ package task2_66.com.fruitbase;
 import task2_66.com.customers.Customer;
 import task2_66.com.customers.FreshCustomer;
 import task2_66.com.customers.UniqueCustomer;
-
 import java.io.IOException;
 
 public class Simulation {

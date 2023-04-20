@@ -2,7 +2,6 @@ package task2_66.com.fruitbase;
 
 
 import task2_66.com.fruitbase.fruits.Fruit;
-
 import java.io.*;
 
 public class FruitBase {

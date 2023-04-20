@@ -1,7 +1,6 @@
 package task2_66.com.customers;
 
 
-import task2_66.com.fruitbase.Cargo;
 import task2_66.com.fruitbase.Delivery;
 import task2_66.com.fruitbase.fruits.Fruit;
 import java.util.ArrayList;
