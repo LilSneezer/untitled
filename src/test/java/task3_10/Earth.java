@@ -8,20 +8,20 @@ public class Earth extends NatureElement {
 
     @Override
     public NatureElement connect(NatureElement otherElemName) {
-        if (otherElemName.getName().equals("Air")) {
-            System.out.println(this.name + " + " + otherElemName.getName() + " = " + new Dust().toString());
+        if (otherElemName instanceof Air) {
+            System.out.println(this.name + " + " + otherElemName.getName() + " = " + new Dust());
             return new Dust();
         }
-        if (otherElemName.getName().equals("Earth")) {
-            System.out.println(this.name + " + " + otherElemName.getName() + " = " + new Pressure().toString());
+        if (otherElemName instanceof Earth) {
+            System.out.println(this.name + " + " + otherElemName.getName() + " = " + new Pressure());
             return new Pressure();
         }
-        if (otherElemName.getName().equals("Fire")) {
-            System.out.println(this.name + " + " + otherElemName.getName() + " = " + new Lava().toString());
+        if (otherElemName instanceof Fire) {
+            System.out.println(this.name + " + " + otherElemName.getName() + " = " + new Lava());
             return new Lava();
         }
-        if (otherElemName.getName().equals("Water")) {
-            System.out.println(this.name + " + " + otherElemName.getName() + " = " + new Mud().toString());
+        if (otherElemName instanceof Water) {
+            System.out.println(this.name + " + " + otherElemName.getName() + " = " + new Mud());
             return new Mud();
         }
         System.out.println("Нет нового элемента");
