@@ -4,7 +4,6 @@ package task2_66.com.fruitbase;
 import task2_66.com.customers.Customer;
 import task2_66.com.customers.FreshCustomer;
 import task2_66.com.customers.UniqueCustomer;
-
 import java.io.IOException;
 
 public class Simulation {
@@ -17,7 +16,7 @@ public class Simulation {
         FreshCustomer freshCustomer = new FreshCustomer("Свежие");
         UniqueCustomer uniqueCustomer = new UniqueCustomer("Уникальные");
         Customer[] customers = new Customer[]{freshCustomer, uniqueCustomer};
-        Cargo cargo = fruitBase.takeOrder(args);
+        Delivery cargo = fruitBase.takeOrder(args);
         System.out.println("Информация о сформированном грузе: \n" + cargo);
         for (Customer customer: customers) {
             customer.takeFruits(cargo);

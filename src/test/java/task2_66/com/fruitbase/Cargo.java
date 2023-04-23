@@ -5,14 +5,15 @@ import task2_66.com.fruitbase.fruits.Fruit;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
-public class Cargo {
+public class Cargo implements Delivery{
     private ArrayList<Fruit> fruit;
 
     public Cargo() {
         this.fruit = new ArrayList<>();
     }
 
-    void addFruit(Fruit fruit) {
+    @Override
+    public void addFruit(Fruit fruit) {
         this.fruit.add(fruit);
     }
 

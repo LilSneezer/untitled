@@ -2,7 +2,6 @@ package task2_66.com.fruitbase;
 
 
 import task2_66.com.fruitbase.fruits.Fruit;
-
 import java.io.*;
 
 public class FruitBase {
@@ -12,9 +11,9 @@ public class FruitBase {
         fruitCatalogue = new FruitCatalogue();
     }
 
-    public Cargo takeOrder(String[] fruitsFromOrder) {
+    public Delivery takeOrder(String[] fruitsFromOrder) {
         Fruit foundFruit;
-        Cargo cargo = new Cargo();
+        Delivery cargo = new Cargo();
         for (int i = 0; i < fruitsFromOrder.length; i++) {
             foundFruit = fruitCatalogue.findFruit(fruitsFromOrder[i]);
             if (foundFruit != null) {

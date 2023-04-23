@@ -1,7 +1,7 @@
 package task2_66.com.customers;
 
 
-import task2_66.com.fruitbase.Cargo;
+import task2_66.com.fruitbase.Delivery;
 
 public class UniqueCustomer extends Customer {
 
@@ -9,7 +9,7 @@ public class UniqueCustomer extends Customer {
         super(name);
     }
 
-    public void takeFruits(Cargo cargo) {
+    public void takeFruits(Delivery cargo) {
         int i = 0;
         while (i < cargo.getFruits().size()) {
             if (!purchases.contains(cargo.getFruits().get(i))) {

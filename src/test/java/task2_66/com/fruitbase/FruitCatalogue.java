@@ -2,7 +2,6 @@ package task2_66.com.fruitbase;
 
 
 import task2_66.com.fruitbase.fruits.*;
-
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Arrays;
