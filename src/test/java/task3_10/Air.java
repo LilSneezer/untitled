@@ -10,20 +10,24 @@ public class Air extends NatureElement {
     @Override
     public NatureElement connect(NatureElement otherElemName) {
         if (otherElemName instanceof Air) {
-            System.out.println(this.name + " + " + otherElemName.getName() + " = " + new Pressure());
-            return new Pressure();
+            Pressure pressure = new Pressure();
+            System.out.println(this.name + " + " + otherElemName.getName() + " = " + pressure);
+            return pressure;
         }
         if (otherElemName instanceof Earth) {
-            System.out.println(this.name + " + " + otherElemName.getName() + " = " + new Dust());
-            return new Dust();
+            Dust dust = new Dust();
+            System.out.println(this.name + " + " + otherElemName.getName() + " = " + dust);
+            return dust;
         }
         if (otherElemName instanceof Fire) {
-            System.out.println(this.name + " + " + otherElemName.getName() + " = " + new Energy());
-            return new Energy();
+            Energy energy = new Energy();
+            System.out.println(this.name + " + " + otherElemName.getName() + " = " + energy);
+            return energy;
         }
         if (otherElemName instanceof Water) {
-            System.out.println(this.name + " + " + otherElemName.getName() + " = " + new Rain());
-            return new Rain();
+            Rain rain = new Rain();
+            System.out.println(this.name + " + " + otherElemName.getName() + " = " + rain);
+            return rain;
         }
         System.out.println("Нет нового элемента");
         return null;

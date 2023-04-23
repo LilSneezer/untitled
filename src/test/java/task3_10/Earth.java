@@ -9,20 +9,24 @@ public class Earth extends NatureElement {
     @Override
     public NatureElement connect(NatureElement otherElemName) {
         if (otherElemName instanceof Air) {
-            System.out.println(this.name + " + " + otherElemName.getName() + " = " + new Dust());
+            Dust dust = new Dust();
+            System.out.println(this.name + " + " + otherElemName.getName() + " = " + dust);
             return new Dust();
         }
         if (otherElemName instanceof Earth) {
-            System.out.println(this.name + " + " + otherElemName.getName() + " = " + new Pressure());
-            return new Pressure();
+            Pressure pressure = new Pressure();
+            System.out.println(this.name + " + " + otherElemName.getName() + " = " + pressure);
+            return pressure;
         }
         if (otherElemName instanceof Fire) {
-            System.out.println(this.name + " + " + otherElemName.getName() + " = " + new Lava());
-            return new Lava();
+            Lava lava = new Lava();
+            System.out.println(this.name + " + " + otherElemName.getName() + " = " + lava);
+            return lava;
         }
         if (otherElemName instanceof Water) {
-            System.out.println(this.name + " + " + otherElemName.getName() + " = " + new Mud());
-            return new Mud();
+            Mud mud = new Mud();
+            System.out.println(this.name + " + " + otherElemName.getName() + " = " + mud);
+            return mud;
         }
         System.out.println("Нет нового элемента");
         return null;

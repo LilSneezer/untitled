@@ -9,20 +9,23 @@ public class Fire extends NatureElement {
     @Override
     public NatureElement connect(NatureElement otherElemName) {
         if (otherElemName instanceof Air) {
-            System.out.println(this.name + " + " + otherElemName.getName() + " = " + new Energy());
-            return new Energy();
+            Energy energy = new Energy();
+            System.out.println(this.name + " + " + otherElemName.getName() + " = " + energy);
+            return energy;
         }
         if (otherElemName instanceof Earth) {
-            System.out.println(this.name + " + " + otherElemName.getName() + " = " + new Lava());
-            return new Lava();
+            Lava lava = new Lava();
+            System.out.println(this.name + " + " + otherElemName.getName() + " = " + lava);
+            return lava;
         }
         if (otherElemName instanceof Fire) {
             System.out.println(this.name + " + " + otherElemName.getName() + " не производит новый элемент");
             return null;
         }
         if (otherElemName instanceof Water) {
-            System.out.println(this.name + " + " + otherElemName.getName() + " = " + new Steam());
-            return new Steam();
+            Steam steam = new Steam();
+            System.out.println(this.name + " + " + otherElemName.getName() + " = " + steam);
+            return steam;
         }
         System.out.println("Нет нового элемента");
         return null;

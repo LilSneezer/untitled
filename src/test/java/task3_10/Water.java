@@ -9,20 +9,24 @@ public class Water extends NatureElement {
     @Override
     public NatureElement connect(NatureElement otherElemName) {
         if (otherElemName instanceof Air) {
-            System.out.println(this.name + " + " + otherElemName.getName() + " = " + new Rain());
-            return new Rain();
+            Rain rain = new Rain();
+            System.out.println(this.name + " + " + otherElemName.getName() + " = " + rain);
+            return rain;
         }
         if (otherElemName instanceof Earth) {
-            System.out.println(this.name + " + " + otherElemName.getName() + " = " + new Mud());
-            return new Mud();
+            Mud mud = new Mud();
+            System.out.println(this.name + " + " + otherElemName.getName() + " = " + mud);
+            return mud;
         }
         if (otherElemName instanceof Fire) {
-            System.out.println(this.name + " + " + otherElemName.getName() + " = " + new Steam());
-            return new Steam();
+            Steam steam = new Steam();
+            System.out.println(this.name + " + " + otherElemName.getName() + " = " + steam);
+            return steam;
         }
         if (otherElemName instanceof Water) {
-            System.out.println(this.name + " + " + otherElemName.getName() + " = " + new Sea());
-            return new Sea();
+            Sea sea = new Sea();
+            System.out.println(this.name + " + " + otherElemName.getName() + " = " + sea);
+            return sea;
         }
         System.out.println("Нет нового элемента");
         return null;
