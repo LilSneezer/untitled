@@ -29,6 +29,6 @@ public class Earth extends NatureElement {
             return mud;
         }
         System.out.println("Нет нового элемента");
-        return null;
+        throw new UnsupportedOperationException();
     }
 }

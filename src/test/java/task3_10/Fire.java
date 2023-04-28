@@ -20,7 +20,7 @@ public class Fire extends NatureElement {
         }
         if (otherElemName instanceof Fire) {
             System.out.println(this.name + " + " + otherElemName.getName() + " не производит новый элемент");
-            return null;
+            throw new UnsupportedOperationException();
         }
         if (otherElemName instanceof Water) {
             Steam steam = new Steam();
@@ -28,6 +28,6 @@ public class Fire extends NatureElement {
             return steam;
         }
         System.out.println("Нет нового элемента");
-        return null;
+        throw new UnsupportedOperationException();
     }
 }

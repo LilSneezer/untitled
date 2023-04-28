@@ -2,7 +2,6 @@ package task2_66.com.fruitbase;
 
 
 import task2_66.com.fruitbase.fruits.Fruit;
-
 import java.io.*;
 
 public class FruitBase {
@@ -24,8 +23,8 @@ public class FruitBase {
         return cargo;
     }
 
-    public void exportCatalogue() throws IOException {
-        FileOutputStream fileOutputStream = new FileOutputStream("fruitCatalog.ser");
+    public void exportCatalogue(String filePath) throws IOException {
+        FileOutputStream fileOutputStream = new FileOutputStream(filePath);
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
 
         objectOutputStream.writeObject(fruitCatalogue);
@@ -33,8 +32,8 @@ public class FruitBase {
         System.out.println("каталог экспортирован");
     }
 
-    public void importCatalogue() throws IOException, ClassNotFoundException {
-        FileInputStream fileInputStream = new FileInputStream("fruitCatalog.ser");
+    public void importCatalogue(String filePath) throws IOException, ClassNotFoundException {
+        FileInputStream fileInputStream = new FileInputStream(filePath);
         ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
 
         fruitCatalogue = (FruitCatalogue) objectInputStream.readObject();
