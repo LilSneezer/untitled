@@ -19,12 +19,12 @@ public class Alchemy {
         for (int i = 0; i < natureElements.size(); i+= 2) {
             try {
                 if (i == natureElements.size() - 1) {
-                    System.out.printf("Для %s с индексом %s нет пары", natureElements.get(i), i);
+                    System.out.printf("Для %s с индексом %s нет пары\n", natureElements.get(i), i);
                 } else {
                     natureElements.get(i).connect(natureElements.get(i+1));
                 }
             } catch (UnsupportedOperationException ex) {
-                System.out.printf("Объект %s не подошел под условия", natureElements.get(i));
+                System.out.printf("Объект %s не подошел под условия\n", natureElements.get(i+1));
             }
         }
     }

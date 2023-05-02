@@ -1,5 +1,6 @@
 package task2_66.com.exceptions;
 
+
 public class ImportException extends Exception {
     public ImportException(String message) {
         super(message);
