@@ -4,46 +4,19 @@ package task2_66.com.fruitbase;
 import task2_66.com.customers.Customer;
 import task2_66.com.customers.FreshCustomer;
 import task2_66.com.customers.UniqueCustomer;
-import task2_66.com.exceptions.ExportException;
-import task2_66.com.exceptions.ImportException;
-import task2_66.com.exceptions.UnhandledExportException;
-import task2_66.com.exceptions.UnhandledImportException;
-
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InvalidClassException;
 
 public class Simulation {
     public static void main(String[] args) {
-        String flag = getFlag(args);
-        String path = getPath(args);
-        FruitBase fruitBase = new FruitBase();
 
         if (args.length == 0) {
             System.exit(1);
         }
 
-        try {
-            selectMethodByFlag(flag, fruitBase, path);
-        } catch (FileNotFoundException ex) {
-            System.out.printf("Не найден файл %s \n", path);
-            System.exit(1);
-        } catch (InvalidClassException ex) {
-            System.out.printf("Невозможно импортировать каталог из файла %s: неподдерживаемая версия\n", path);
-            System.exit(1);
-        } catch (ExportException ex) {
-            System.out.printf("Ошибка при экспорте файла %s \n", path);
-            System.exit(1);
-        } catch (UnhandledExportException ex) {
-            System.out.printf("Непредвиденная ошибка при экспорте каталога из файла %s\n", path);
-            System.exit(1);
-        } catch (UnhandledImportException ex) {
-            System.out.printf("Непредвиденная ошибка при импорте каталога из файла %s\n", path);
-            System.exit(1);
-        } catch (ImportException | ClassNotFoundException | IOException ex) {
-            System.out.printf("Ошибка при импорте файла %s \n", path);
-            System.exit(1);
-        }
+        String flag = getFlag(args);
+        String path = getPath(args);
+        FruitBase fruitBase = new FruitBase();
+
+        selectMethodByFlag(flag, fruitBase, path);
 
         FreshCustomer freshCustomer = new FreshCustomer("Свежие");
         UniqueCustomer uniqueCustomer = new UniqueCustomer("Уникальные");
@@ -83,7 +56,7 @@ public class Simulation {
         return DEFAULT_PATH;
     }
 
-    public static void selectMethodByFlag(String flag, FruitBase fruitBase, String path) throws IOException, ClassNotFoundException, ImportException, task2_66.com.exceptions.ExportException {
+    public static void selectMethodByFlag(String flag, FruitBase fruitBase, String path) {
         if (flag.equals("-e") || flag.equals("--export")) {
             fruitBase.exportCatalogue(path);
         } else if (flag.equals("-i") || flag.equals("--import")) {
