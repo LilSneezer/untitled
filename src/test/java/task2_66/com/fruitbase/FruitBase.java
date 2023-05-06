@@ -49,6 +49,7 @@ public class FruitBase {
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
 
             fruitCatalogue = (FruitCatalogue) objectInputStream.readObject();
+            objectInputStream.close();
             System.out.println("Импортированный каталог: \n" + fruitCatalogue);
             System.out.println("каталог импортирован");
         } catch (InvalidClassException ex) {
