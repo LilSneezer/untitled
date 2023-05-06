@@ -1,6 +1,8 @@
 package task3_10;
 
 
+import java.util.NoSuchElementException;
+
 public class NatureElement {
     protected String name;
 
@@ -9,7 +11,7 @@ public class NatureElement {
     }
 
     public NatureElement connect(NatureElement otherNatureElement) {
-        return null;
+        throw new UnsupportedOperationException();
     }
 
     public static NatureElement create(String baseElemName) {
@@ -22,9 +24,10 @@ public class NatureElement {
                 return new Earth();
             case "Water":
                 return new Water();
+            case "Energy":
+                return new Energy();
             default:
-                System.out.println("Неизвестный элемент");
-                return null;
+                throw new NoSuchElementException("Неизвестный элемент");
         }
     }
 

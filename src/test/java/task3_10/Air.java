@@ -30,6 +30,6 @@ public class Air extends NatureElement {
             return rain;
         }
         System.out.println("Нет нового элемента");
-        return null;
+        throw new UnsupportedOperationException();
     }
 }

@@ -28,7 +28,12 @@ public class Water extends NatureElement {
             System.out.println(this.name + " + " + otherElemName.getName() + " = " + sea);
             return sea;
         }
+        if (otherElemName instanceof Energy) {
+            Steam steam = new Steam();
+            System.out.println(this.name + " + " + otherElemName.getName() + " = " + steam);
+            return steam;
+        }
         System.out.println("Нет нового элемента");
-        return null;
+        throw new UnsupportedOperationException();
     }
 }
