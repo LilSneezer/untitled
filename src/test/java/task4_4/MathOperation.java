@@ -19,39 +19,6 @@ public class MathOperation {
         String operationName = checkOperationName(args);
         Function operationObject = createOperationObject(operationName);
 
-        if (operationName.equals("Wave")) {
-            NewOperation wave = new NewOperation() {
-                ArrayList<Integer> sum = new ArrayList<>();
-                @Override
-                public ArrayList<Integer> wave(ArrayList<Integer> n) {
-                    sum.add(n.get(0));
-                    for (int i = 1; i < n.size(); i++) {
-                        sum.add(n.get(i-1) + n.get(i));
-                    }
-                    return sum;
-                }
-            };
-            System.out.println(numbers);
-            System.out.println(wave.wave(numbers));
-        }
-
-        if (operationName.equals("SquareEven")) {
-            ArrayList<Integer> squaredArr = new ArrayList<>();
-            SquareEven squareEven = (numbArr) -> {
-                for (int num: numbArr) {
-                    if (num % 2 == 0) {
-                        squaredArr.add(num*num);
-                    } else {
-                        squaredArr.add(num);
-                    }
-                }
-                return squaredArr;
-            };
-            System.out.println(numbers);
-            System.out.println(squareEven.squareEven(numbers));
-        }
-
-
         if (operationObject != null) {
             System.out.println(numbers);
             System.out.println(applyFunction(numbers, operationObject));
@@ -91,6 +58,25 @@ public class MathOperation {
         }
         if (operationName.equals("Square")) {
             return new Square();
+        }
+        if (operationName.equals("Wave")) {
+            return new Function() {
+                int temp = 0;
+                @Override
+                public int evaluate(int p) {
+                    int sum = p + temp;
+                    temp = p;
+                    return sum;
+                }
+            };
+        }
+        if (operationName.equals("SquareEven")) {
+            return (p) -> {
+                if (p % 2 == 0) {
+                    return p*p;
+                }
+                return p;
+            };
         }
         return null;
     }
