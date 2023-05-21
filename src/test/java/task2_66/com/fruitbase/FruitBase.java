@@ -23,22 +23,48 @@ public class FruitBase {
         return cargo;
     }
 
-    public void exportCatalogue() throws IOException {
-        FileOutputStream fileOutputStream = new FileOutputStream("fruitCatalog.ser");
-        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+    public void exportCatalogue(String filePath) {
+        try {
+            FileOutputStream fileOutputStream = new FileOutputStream(filePath);
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
 
-        objectOutputStream.writeObject(fruitCatalogue);
-        objectOutputStream.close();
-        System.out.println("каталог экспортирован");
+            objectOutputStream.writeObject(fruitCatalogue);
+            objectOutputStream.close();
+            System.out.println("каталог экспортирован");
+        } catch (FileNotFoundException ex) {
+            System.out.printf("Не найден файл %s \n", filePath);
+            System.exit(1);
+        } catch (IOException ex) {
+            System.out.printf("Ошибка при экспорте файла %s \n", filePath);
+            System.exit(1);
+        } catch (RuntimeException ex) {
+            System.out.printf("Непредвиденная ошибка при экспорте каталога из файла %s\n", filePath);
+            System.exit(1);
+        }
     }
 
-    public void importCatalogue() throws IOException, ClassNotFoundException {
-        FileInputStream fileInputStream = new FileInputStream("fruitCatalog.ser");
-        ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+    public void importCatalogue(String filePath) {
+        try {
+            FileInputStream fileInputStream = new FileInputStream(filePath);
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
 
-        fruitCatalogue = (FruitCatalogue) objectInputStream.readObject();
-        System.out.println("Импортированный каталог: \n" + fruitCatalogue);
-        System.out.println("каталог импортирован");
+            fruitCatalogue = (FruitCatalogue) objectInputStream.readObject();
+            objectInputStream.close();
+            System.out.println("Импортированный каталог: \n" + fruitCatalogue);
+            System.out.println("каталог импортирован");
+        } catch (InvalidClassException ex) {
+            System.out.printf("Невозможно импортировать каталог из файла %s: неподдерживаемая версия\n", filePath);
+            System.exit(1);
+        } catch (FileNotFoundException ex) {
+            System.out.printf("Не найден файл %s \n", filePath);
+            System.exit(1);
+        } catch (IOException ex) {
+            System.out.printf("Ошибка при импорте файла %s \n", filePath);
+            System.exit(1);
+        } catch (RuntimeException | ClassNotFoundException ex) {
+            System.out.printf("Непредвиденная ошибка при импорте каталога из файла %s\n", filePath);
+            System.exit(1);
+        }
     }
 
     @Override

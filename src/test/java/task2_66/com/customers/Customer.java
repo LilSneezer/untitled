@@ -9,7 +9,7 @@ public abstract class Customer {
     protected ArrayList<Fruit> purchases;
     protected String name;
 
-    Customer(String name) {
+    public Customer(String name) {
         purchases = new ArrayList<>();
         this.name = name;
     }
