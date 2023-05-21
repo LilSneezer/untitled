@@ -4,8 +4,7 @@ package task2_66.com.fruitbase;
 import task2_66.com.customers.Customer;
 import task2_66.com.customers.FreshCustomer;
 import task2_66.com.customers.UniqueCustomer;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
+import java.io.IOException;
 
 public class Simulation {
     public static void main(String[] args) {
@@ -23,6 +22,8 @@ public class Simulation {
         Cargo cargo = fruitBase.takeOrder(args);
         FreshCustomer freshCustomer = new FreshCustomer("Свежие");
         UniqueCustomer uniqueCustomer = new UniqueCustomer("Уникальные");
+        Customer[] customers = new Customer[]{freshCustomer, uniqueCustomer};
+        Delivery cargo = fruitBase.takeOrder(args);
         Customer expensiveFruitCustomer = new Customer("Дорогие Фрукты") {
             final BigDecimal maxPrice = findMaxPrice(cargo);
             final BigDecimal percentOfMaxPrice = maxPrice.multiply(new BigDecimal(75)).divide(new BigDecimal(100), RoundingMode.CEILING);
