@@ -4,6 +4,8 @@ package task2_66.com.fruitbase;
 import task2_66.com.customers.Customer;
 import task2_66.com.customers.FreshCustomer;
 import task2_66.com.customers.UniqueCustomer;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class Simulation {
     public static void main(String[] args) {
@@ -18,10 +20,24 @@ public class Simulation {
 
         selectMethodByFlag(flag, fruitBase, path);
 
+        Cargo cargo = fruitBase.takeOrder(args);
         FreshCustomer freshCustomer = new FreshCustomer("Свежие");
         UniqueCustomer uniqueCustomer = new UniqueCustomer("Уникальные");
-        Customer[] customers = new Customer[]{freshCustomer, uniqueCustomer};
-        Cargo cargo = fruitBase.takeOrder(args);
+        Customer expensiveFruitCustomer = new Customer("Дорогие Фрукты") {
+            final BigDecimal maxPrice = findMaxPrice(cargo);
+            final BigDecimal percentOfMaxPrice = maxPrice.multiply(new BigDecimal(75)).divide(new BigDecimal(100), RoundingMode.CEILING);
+            @Override
+            public void takeFruits(Cargo cargo) {
+
+                for (int i = 0; i < cargo.getFruits().size(); i++) {
+                    if (cargo.getFruits().get(i).getPrice().compareTo(percentOfMaxPrice) >= 0) {
+                        purchases.add(cargo.getFruits().get(i));
+                    }
+                }
+                actualizeCargo(purchases, cargo);
+            }
+        };
+        Customer[] customers = new Customer[]{freshCustomer, uniqueCustomer, expensiveFruitCustomer};
         System.out.println("Информация о сформированном грузе: \n" + cargo);
         for (Customer customer: customers) {
             customer.takeFruits(cargo);
@@ -62,5 +78,15 @@ public class Simulation {
         } else if (flag.equals("-i") || flag.equals("--import")) {
             fruitBase.importCatalogue(path);
         }
+    }
+
+    public static BigDecimal findMaxPrice(Cargo cargo) {
+        BigDecimal maxPrice = BigDecimal.ZERO;
+        for (int i = 0; i < cargo.getFruits().size(); i++) {
+            if (cargo.getFruits().get(i).getPrice().compareTo(maxPrice) > 0) {
+                maxPrice = cargo.getFruits().get(i).getPrice();
+            }
+        }
+        return maxPrice;
     }
 }

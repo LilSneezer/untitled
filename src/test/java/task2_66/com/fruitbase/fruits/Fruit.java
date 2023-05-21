@@ -12,14 +12,14 @@ public abstract class Fruit implements Serializable {
     protected Freshness freshness;
 
 
-    Fruit(double weight, BigDecimal price, String name, Freshness freshness) {
+    public Fruit(double weight, BigDecimal price, String name, Freshness freshness) {
         this.weight = weight;
         this.price = price;
         this.name = name;
         this.freshness = freshness;
     }
 
-    Fruit(double weight, BigDecimal price, String name) {
+    public Fruit(double weight, BigDecimal price, String name) {
         this.weight = weight;
         this.price = price;
         this.name = name;
