@@ -4,7 +4,15 @@ package task2_66.com.fruitbase;
 import task2_66.com.customers.Customer;
 import task2_66.com.customers.FreshCustomer;
 import task2_66.com.customers.UniqueCustomer;
+import task2_66.com.fruitbase.fruits.Apple;
+import task2_66.com.fruitbase.fruits.Freshness;
+import task2_66.com.fruitbase.vegetables.Cucumber;
+import task2_66.com.interfaces.Fruit;
+import task2_66.com.interfaces.Vegetable;
+
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class Simulation {
     public static void main(String[] args) {
@@ -19,16 +27,14 @@ public class Simulation {
 
         selectMethodByFlag(flag, fruitBase, path);
 
-        Cargo cargo = fruitBase.takeOrder(args);
         FreshCustomer freshCustomer = new FreshCustomer("Свежие");
         UniqueCustomer uniqueCustomer = new UniqueCustomer("Уникальные");
-        Customer[] customers = new Customer[]{freshCustomer, uniqueCustomer};
         Delivery cargo = fruitBase.takeOrder(args);
         Customer expensiveFruitCustomer = new Customer("Дорогие Фрукты") {
             final BigDecimal maxPrice = findMaxPrice(cargo);
             final BigDecimal percentOfMaxPrice = maxPrice.multiply(new BigDecimal(75)).divide(new BigDecimal(100), RoundingMode.CEILING);
             @Override
-            public void takeFruits(Cargo cargo) {
+            public void takeFruits(Delivery cargo) {
 
                 for (int i = 0; i < cargo.getFruits().size(); i++) {
                     if (cargo.getFruits().get(i).getPrice().compareTo(percentOfMaxPrice) >= 0) {
@@ -46,6 +52,14 @@ public class Simulation {
             customer.printPurchases();
             System.out.println(cargo.toString());
         }
+
+        ////////////// task 7.6 ////////////////
+        Apple apple = new Apple(30.0, new BigDecimal("500"), "Apple");
+        Cucumber cucumber = new Cucumber();
+        Basket<Fruit> fruitBasket = new Basket<>();
+        Basket<Vegetable> vegetableBasket = new Basket<>();
+        fruitBasket.addItem(apple);
+        vegetableBasket.addItem(cucumber);
     }
 
     public static String getFlag(String[] args) {
@@ -81,7 +95,7 @@ public class Simulation {
         }
     }
 
-    public static BigDecimal findMaxPrice(Cargo cargo) {
+    public static BigDecimal findMaxPrice(Delivery cargo) {
         BigDecimal maxPrice = BigDecimal.ZERO;
         for (int i = 0; i < cargo.getFruits().size(); i++) {
             if (cargo.getFruits().get(i).getPrice().compareTo(maxPrice) > 0) {

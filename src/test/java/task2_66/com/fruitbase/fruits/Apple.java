@@ -3,7 +3,7 @@ package task2_66.com.fruitbase.fruits;
 
 import java.math.BigDecimal;
 
-public class Apple extends Fruit {
+public class Apple extends Fruit implements task2_66.com.interfaces.Fruit {
 
     public Apple(double weight, BigDecimal price, String name) {
         super(weight, price, name);
