@@ -5,12 +5,9 @@ import task2_66.com.customers.Customer;
 import task2_66.com.customers.FreshCustomer;
 import task2_66.com.customers.UniqueCustomer;
 import task2_66.com.fruitbase.fruits.Apple;
-import task2_66.com.fruitbase.fruits.Freshness;
 import task2_66.com.fruitbase.vegetables.Cucumber;
 import task2_66.com.interfaces.Fruit;
 import task2_66.com.interfaces.Vegetable;
-
-import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
