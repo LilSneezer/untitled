@@ -11,4 +11,9 @@ public class Orange extends Fruit {
     public Orange(double weight, BigDecimal price, String name, Freshness freshness) {
         super(weight, price, name, freshness);
     }
+
+    @Override
+    public String getName() {
+        return this.name;
+    }
 }

@@ -30,6 +30,7 @@ public class Simulation {
         Customer expensiveFruitCustomer = new Customer("Дорогие Фрукты") {
             final BigDecimal maxPrice = findMaxPrice(cargo);
             final BigDecimal percentOfMaxPrice = maxPrice.multiply(new BigDecimal(75)).divide(new BigDecimal(100), RoundingMode.CEILING);
+
             @Override
             public void takeFruits(Delivery cargo) {
 
@@ -43,20 +44,29 @@ public class Simulation {
         };
         Customer[] customers = new Customer[]{freshCustomer, uniqueCustomer, expensiveFruitCustomer};
         System.out.println("Информация о сформированном грузе: \n" + cargo);
-        for (Customer customer: customers) {
+        for (Customer customer : customers) {
             customer.takeFruits(cargo);
             System.out.printf("Покупатель %s выбрал из груза: ", customer.getName());
             customer.printPurchases();
             System.out.println(cargo.toString());
         }
 
-        ////////////// task 7.6 ////////////////
+        ////////////// task 7.6.1 ////////////////
         Apple apple = new Apple(30.0, new BigDecimal("500"), "Apple");
-        Cucumber cucumber = new Cucumber();
+        Cucumber cucumber = new Cucumber("Огурец");
+        System.out.println("cucumber name: " + cucumber.getName());
+        System.out.println("apple name: " + apple.getName());
         Basket<Fruit> fruitBasket = new Basket<>();
         Basket<Vegetable> vegetableBasket = new Basket<>();
         fruitBasket.addItem(apple);
         vegetableBasket.addItem(cucumber);
+
+        //////////// task 7.6.2 ///////////////
+        BasketWithHashMap basketWithHashMap = new BasketWithHashMap();
+        basketWithHashMap.addItem(apple.getName());
+        basketWithHashMap.addItem(cucumber.getName());
+        System.out.println("Вызов makeSalad");
+        makeSalad(basketWithHashMap);
     }
 
     public static String getFlag(String[] args) {
@@ -100,5 +110,11 @@ public class Simulation {
             }
         }
         return maxPrice;
+    }
+
+    public static void makeSalad(BasketWithHashMap basketWithHashMap) {
+        System.out.printf("```Готовим салатик:\n" +
+                " Режем - %s \n" +
+                " Угощайся!```", basketWithHashMap.iterator());
     }
 }
