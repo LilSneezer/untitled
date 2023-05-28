@@ -7,9 +7,13 @@ import task2_66.com.customers.UniqueCustomer;
 import task2_66.com.fruitbase.fruits.Apple;
 import task2_66.com.fruitbase.vegetables.Cucumber;
 import task2_66.com.interfaces.Fruit;
+import task2_66.com.interfaces.Plant;
 import task2_66.com.interfaces.Vegetable;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Simulation {
     public static void main(String[] args) {
@@ -52,7 +56,7 @@ public class Simulation {
         }
 
         ////////////// task 7.6.1 ////////////////
-        Apple apple = new Apple(30.0, new BigDecimal("500"), "Apple");
+        Apple apple = new Apple(30.0, new BigDecimal("500"), "Голден");
         Cucumber cucumber = new Cucumber("Огурец");
         System.out.println("cucumber name: " + cucumber.getName());
         System.out.println("apple name: " + apple.getName());
@@ -67,6 +71,19 @@ public class Simulation {
         basketWithHashMap.addItem(cucumber.getName());
         System.out.println("Вызов makeSalad");
         makeSalad(basketWithHashMap);
+
+        /////////// task 7.6.3 ////////////////
+        ArrayList<Plant> plants = new ArrayList<>();
+        plants.add(apple);
+        plants.add(cucumber);
+        HashMap<String, String> plantsMap = new HashMap<>();
+        for (Plant plant: plants) {
+            plantsMap.put(plant.getName(), plant.getClass().getSimpleName());
+        }
+        System.out.println("Задание 3");
+        for (Map.Entry<String, String> entry: plantsMap.entrySet()) {
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        }
     }
 
     public static String getFlag(String[] args) {
@@ -115,6 +132,6 @@ public class Simulation {
     public static void makeSalad(BasketWithHashMap basketWithHashMap) {
         System.out.printf("```Готовим салатик:\n" +
                 " Режем - %s \n" +
-                " Угощайся!```", basketWithHashMap.iterator());
+                " Угощайся!```\n", basketWithHashMap.iterator());
     }
 }
