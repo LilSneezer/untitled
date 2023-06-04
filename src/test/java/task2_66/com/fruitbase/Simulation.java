@@ -76,13 +76,13 @@ public class Simulation {
         ArrayList<Plant> plants = new ArrayList<>();
         plants.add(apple);
         plants.add(cucumber);
-        HashMap<String, String> plantsMap = new HashMap<>();
+        HashMap<String, Plant> plantsMap = new HashMap<>();
         for (Plant plant: plants) {
-            plantsMap.put(plant.getName(), plant.getClass().getSimpleName());
+            plantsMap.put(plant.getName(), plant);
         }
         System.out.println("Задание 3");
-        for (Map.Entry<String, String> entry: plantsMap.entrySet()) {
-            System.out.println(entry.getKey() + " " + entry.getValue());
+        for (Map.Entry<String, Plant> entry: plantsMap.entrySet()) {
+            System.out.println(entry.getKey() + " " + entry.getValue().getClass().getSimpleName());
         }
     }
 
