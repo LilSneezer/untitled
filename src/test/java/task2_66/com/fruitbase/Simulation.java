@@ -7,6 +7,7 @@ import task2_66.com.customers.UniqueCustomer;
 import task2_66.com.fruitbase.fruits.Apple;
 import task2_66.com.fruitbase.vegetables.Cucumber;
 import task2_66.com.interfaces.Fruit;
+import task2_66.com.interfaces.Plant;
 import task2_66.com.interfaces.Vegetable;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -62,11 +63,13 @@ public class Simulation {
         vegetableBasket.addItem(cucumber);
 
         //////////// task 7.6.2 ///////////////
-        BasketWithHashMap basketWithHashMap = new BasketWithHashMap();
-        basketWithHashMap.addItem(apple.getName());
-        basketWithHashMap.addItem(cucumber.getName());
+        BasketWithHashMap<Fruit> fruitBasketWithHashMap = new BasketWithHashMap<>();
+        BasketWithHashMap<Vegetable> vegetableBasketWithHashMap = new BasketWithHashMap<>();
+        fruitBasketWithHashMap.addItem(apple.getName());
+        vegetableBasketWithHashMap.addItem(cucumber.getName());
         System.out.println("Вызов makeSalad");
-        makeSalad(basketWithHashMap);
+        makeSalad(fruitBasketWithHashMap);
+        makeSalad(vegetableBasketWithHashMap);
     }
 
     public static String getFlag(String[] args) {
@@ -112,9 +115,9 @@ public class Simulation {
         return maxPrice;
     }
 
-    public static void makeSalad(BasketWithHashMap basketWithHashMap) {
+    public static void makeSalad(BasketWithHashMap<?> basketWithHashMap) {
         System.out.printf("```Готовим салатик:\n" +
                 " Режем - %s \n" +
-                " Угощайся!```", basketWithHashMap.iterator());
+                " Угощайся!```\n", basketWithHashMap.iterator().next());
     }
 }
