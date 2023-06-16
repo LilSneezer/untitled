@@ -5,12 +5,17 @@ import task2_66.com.customers.Customer;
 import task2_66.com.customers.FreshCustomer;
 import task2_66.com.customers.UniqueCustomer;
 import task2_66.com.fruitbase.fruits.Apple;
+import task2_66.com.fruitbase.fruits.Orange;
 import task2_66.com.fruitbase.vegetables.Cucumber;
 import task2_66.com.interfaces.Fruit;
 import task2_66.com.interfaces.Plant;
 import task2_66.com.interfaces.Vegetable;
+
+import javax.lang.model.type.NullType;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.Iterator;
+import java.util.Map;
 
 public class Simulation {
     public static void main(String[] args) {
@@ -54,6 +59,7 @@ public class Simulation {
 
         ////////////// task 7.6.1 ////////////////
         Apple apple = new Apple(30.0, new BigDecimal("500"), "Apple");
+        Orange orange = new Orange(30.0, new BigDecimal("550"), "Orange");
         Cucumber cucumber = new Cucumber("Огурец");
         System.out.println("cucumber name: " + cucumber.getName());
         System.out.println("apple name: " + apple.getName());
@@ -65,11 +71,15 @@ public class Simulation {
         //////////// task 7.6.2 ///////////////
         BasketWithHashMap<Fruit> fruitBasketWithHashMap = new BasketWithHashMap<>();
         BasketWithHashMap<Vegetable> vegetableBasketWithHashMap = new BasketWithHashMap<>();
-        fruitBasketWithHashMap.addItem(apple.getName());
-        vegetableBasketWithHashMap.addItem(cucumber.getName());
-        System.out.println("Вызов makeSalad");
+        fruitBasketWithHashMap.addItem(apple);
+        fruitBasketWithHashMap.addItem(orange);
+        vegetableBasketWithHashMap.addItem(cucumber);
         makeSalad(fruitBasketWithHashMap);
-        makeSalad(vegetableBasketWithHashMap);
+//        System.out.println("Вызов makeSalad");
+//        System.out.printf("```Готовим салатик: \n" +
+//                        "Режем - %s\n" +
+//                        "Угощайся!```", makeSalad(fruitBasketWithHashMap).getName());
+//        makeSalad(vegetableBasketWithHashMap);
     }
 
     public static String getFlag(String[] args) {
@@ -115,9 +125,9 @@ public class Simulation {
         return maxPrice;
     }
 
-    public static void makeSalad(BasketWithHashMap<?> basketWithHashMap) {
-        System.out.printf("```Готовим салатик:\n" +
-                " Режем - %s \n" +
-                " Угощайся!```\n", basketWithHashMap.iterator().next());
+    public static <T> void makeSalad(BasketWithHashMap<T> basketWithHashMap) {
+        for (T key: basketWithHashMap) {
+            System.out.println(key);
+        }
     }
 }
