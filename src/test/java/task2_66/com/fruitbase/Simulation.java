@@ -8,14 +8,9 @@ import task2_66.com.fruitbase.fruits.Apple;
 import task2_66.com.fruitbase.fruits.Orange;
 import task2_66.com.fruitbase.vegetables.Cucumber;
 import task2_66.com.interfaces.Fruit;
-import task2_66.com.interfaces.Plant;
 import task2_66.com.interfaces.Vegetable;
-
-import javax.lang.model.type.NullType;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.Iterator;
-import java.util.Map;
 
 public class Simulation {
     public static void main(String[] args) {
