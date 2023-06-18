@@ -12,9 +12,6 @@ import task2_66.com.interfaces.Plant;
 import task2_66.com.interfaces.Vegetable;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class Simulation {
     public static void main(String[] args) {
@@ -57,7 +54,6 @@ public class Simulation {
         }
 
         ////////////// task 7.6.1 ////////////////
-        Apple apple = new Apple(30.0, new BigDecimal("500"), "Голден");
         Apple apple = new Apple(30.0, new BigDecimal("500"), "Apple");
         Orange orange = new Orange(30.0, new BigDecimal("550"), "Orange");
         Cucumber cucumber = new Cucumber("Огурец");
@@ -69,24 +65,6 @@ public class Simulation {
         vegetableBasket.addItem(cucumber);
 
         //////////// task 7.6.2 ///////////////
-        BasketWithHashMap basketWithHashMap = new BasketWithHashMap();
-        basketWithHashMap.addItem(apple.getName());
-        basketWithHashMap.addItem(cucumber.getName());
-        System.out.println("Вызов makeSalad");
-        makeSalad(basketWithHashMap);
-
-        /////////// task 7.6.3 ////////////////
-        ArrayList<Plant> plants = new ArrayList<>();
-        plants.add(apple);
-        plants.add(cucumber);
-        HashMap<String, Plant> plantsMap = new HashMap<>();
-        for (Plant plant: plants) {
-            plantsMap.put(plant.getName(), plant);
-        }
-        System.out.println("Задание 3");
-        for (Map.Entry<String, Plant> entry: plantsMap.entrySet()) {
-            System.out.println(entry.getKey() + " " + entry.getValue().getClass().getSimpleName());
-        }
         BasketWithHashMap<Fruit> fruitBasketWithHashMap = new BasketWithHashMap<>();
         BasketWithHashMap<Vegetable> vegetableBasketWithHashMap = new BasketWithHashMap<>();
         fruitBasketWithHashMap.addItem(apple);
@@ -138,11 +116,6 @@ public class Simulation {
         return maxPrice;
     }
 
-    public static void makeSalad(BasketWithHashMap basketWithHashMap) {
-        System.out.printf("```Готовим салатик:\n" +
-                " Режем - %s \n" +
-                " Угощайся!```\n", basketWithHashMap.iterator());
-      
     public static <T extends Plant> void makeSalad(BasketWithHashMap<T> basketWithHashMap) {
         StringBuilder plants = new StringBuilder();
         for (T key: basketWithHashMap) {
