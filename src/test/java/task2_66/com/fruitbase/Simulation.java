@@ -8,6 +8,7 @@ import task2_66.com.fruitbase.fruits.Apple;
 import task2_66.com.fruitbase.fruits.Orange;
 import task2_66.com.fruitbase.vegetables.Cucumber;
 import task2_66.com.interfaces.Fruit;
+import task2_66.com.interfaces.Plant;
 import task2_66.com.interfaces.Vegetable;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -70,11 +71,6 @@ public class Simulation {
         fruitBasketWithHashMap.addItem(orange);
         vegetableBasketWithHashMap.addItem(cucumber);
         makeSalad(fruitBasketWithHashMap);
-//        System.out.println("Вызов makeSalad");
-//        System.out.printf("```Готовим салатик: \n" +
-//                        "Режем - %s\n" +
-//                        "Угощайся!```", makeSalad(fruitBasketWithHashMap).getName());
-//        makeSalad(vegetableBasketWithHashMap);
     }
 
     public static String getFlag(String[] args) {
@@ -120,9 +116,13 @@ public class Simulation {
         return maxPrice;
     }
 
-    public static <T> void makeSalad(BasketWithHashMap<T> basketWithHashMap) {
+    public static <T extends Plant> void makeSalad(BasketWithHashMap<T> basketWithHashMap) {
+        StringBuilder plants = new StringBuilder();
         for (T key: basketWithHashMap) {
-            System.out.println(key);
+            plants.append(key.getName()).append(" ");
         }
+        System.out.printf("```Готовим салатик: \n" +
+                        "Режем - %s\n" +
+                        "Угощайся!```", plants);
     }
 }
