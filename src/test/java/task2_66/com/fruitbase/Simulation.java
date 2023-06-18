@@ -95,11 +95,11 @@ public class Simulation {
         }
 
         ////////// task 7.9.1 /////////////////
-        List<String> multiFruit = plants.stream()
+        List<Fruit> multiFruit = plants.stream()
                 .filter(el -> el instanceof Fruit)
-                .map(Plant::getName)
+                .map(el -> (Fruit) el)
                 .collect(Collectors.toList());
-        System.out.println("multiFruit: " + multiFruit);
+        System.out.println("multiFruit: " + multiFruit.get(0).getName());
     }
 
     public static String getFlag(String[] args) {
