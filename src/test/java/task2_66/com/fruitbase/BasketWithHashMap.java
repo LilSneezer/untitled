@@ -1,17 +1,18 @@
 package task2_66.com.fruitbase;
 
+
 import javax.lang.model.type.NullType;
 import java.util.HashMap;
-import java.util.Set;
+import java.util.Iterator;
 
-public class BasketWithHashMap {
-    HashMap<String, NullType> basket = new HashMap<>();
+public class BasketWithHashMap<T> implements Iterable<T> {
+    HashMap<T, NullType> basket = new HashMap<>();
 
-    public void addItem(String item1) {
+    public void addItem(T item1) {
         basket.put(item1, null);
     }
 
-    public Set<String> iterator() {
-        return basket.keySet();
+    public Iterator<T> iterator() {
+        return basket.keySet().iterator();
     }
 }

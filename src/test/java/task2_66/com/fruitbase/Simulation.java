@@ -5,6 +5,7 @@ import task2_66.com.customers.Customer;
 import task2_66.com.customers.FreshCustomer;
 import task2_66.com.customers.UniqueCustomer;
 import task2_66.com.fruitbase.fruits.Apple;
+import task2_66.com.fruitbase.fruits.Orange;
 import task2_66.com.fruitbase.vegetables.Cucumber;
 import task2_66.com.interfaces.Fruit;
 import task2_66.com.interfaces.Plant;
@@ -57,6 +58,8 @@ public class Simulation {
 
         ////////////// task 7.6.1 ////////////////
         Apple apple = new Apple(30.0, new BigDecimal("500"), "Голден");
+        Apple apple = new Apple(30.0, new BigDecimal("500"), "Apple");
+        Orange orange = new Orange(30.0, new BigDecimal("550"), "Orange");
         Cucumber cucumber = new Cucumber("Огурец");
         System.out.println("cucumber name: " + cucumber.getName());
         System.out.println("apple name: " + apple.getName());
@@ -84,6 +87,12 @@ public class Simulation {
         for (Map.Entry<String, Plant> entry: plantsMap.entrySet()) {
             System.out.println(entry.getKey() + " " + entry.getValue().getClass().getSimpleName());
         }
+        BasketWithHashMap<Fruit> fruitBasketWithHashMap = new BasketWithHashMap<>();
+        BasketWithHashMap<Vegetable> vegetableBasketWithHashMap = new BasketWithHashMap<>();
+        fruitBasketWithHashMap.addItem(apple);
+        fruitBasketWithHashMap.addItem(orange);
+        vegetableBasketWithHashMap.addItem(cucumber);
+        makeSalad(fruitBasketWithHashMap);
     }
 
     public static String getFlag(String[] args) {
@@ -133,5 +142,14 @@ public class Simulation {
         System.out.printf("```Готовим салатик:\n" +
                 " Режем - %s \n" +
                 " Угощайся!```\n", basketWithHashMap.iterator());
+      
+    public static <T extends Plant> void makeSalad(BasketWithHashMap<T> basketWithHashMap) {
+        StringBuilder plants = new StringBuilder();
+        for (T key: basketWithHashMap) {
+            plants.append(key.getName()).append(" ");
+        }
+        System.out.printf("```Готовим салатик: \n" +
+                        "Режем - %s\n" +
+                        "Угощайся!```", plants);
     }
 }
