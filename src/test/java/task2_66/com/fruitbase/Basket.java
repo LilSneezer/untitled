@@ -1,7 +1,5 @@
 package task2_66.com.fruitbase;
 
-import task2_66.com.fruitbase.fruits.Fruit;
-import task2_66.com.interfaces.Vegetable;
 
 import java.util.ArrayList;
 

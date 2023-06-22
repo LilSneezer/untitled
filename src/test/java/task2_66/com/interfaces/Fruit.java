@@ -1,4 +1,4 @@
 package task2_66.com.interfaces;
 
-public interface Fruit {
+public interface Fruit extends Plant {
 }

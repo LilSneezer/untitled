@@ -11,4 +11,9 @@ public class Banana extends Fruit implements task2_66.com.interfaces.Fruit {
     public Banana(double weight, BigDecimal price, String name, Freshness freshness) {
         super(weight, price, name, freshness);
     }
+
+    @Override
+    public String getName() {
+        return this.name;
+    }
 }
