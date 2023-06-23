@@ -8,13 +8,9 @@ import task2_66.com.fruitbase.fruits.Apple;
 import task2_66.com.fruitbase.fruits.Orange;
 import task2_66.com.fruitbase.vegetables.Cucumber;
 import task2_66.com.interfaces.Fruit;
-import task2_66.com.interfaces.Plant;
 import task2_66.com.interfaces.Vegetable;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class Simulation {
     public static void main(String[] args) {
@@ -57,7 +53,7 @@ public class Simulation {
         }
 
         ////////////// task 7.6.1 ////////////////
-        Apple apple = new Apple(30.0, new BigDecimal("500"), "Голден");
+        Apple apple = new Apple(30.0, new BigDecimal("500"), "Apple");
         Orange orange = new Orange(30.0, new BigDecimal("550"), "Orange");
         Cucumber cucumber = new Cucumber("Огурец");
         System.out.println("cucumber name: " + cucumber.getName());
@@ -74,19 +70,11 @@ public class Simulation {
         fruitBasketWithHashMap.addItem(orange);
         vegetableBasketWithHashMap.addItem(cucumber);
         makeSalad(fruitBasketWithHashMap);
-
-        /////////// task 7.6.3 ////////////////
-        ArrayList<Plant> plants = new ArrayList<>();
-        plants.add(apple);
-        plants.add(cucumber);
-        HashMap<String, String> plantsMap = new HashMap<>();
-        for (Plant plant: plants) {
-            plantsMap.put(plant.getName(), plant.getClass().getSimpleName());
-        }
-        System.out.println("Задание 3");
-        for (Map.Entry<String, String> entry: plantsMap.entrySet()) {
-            System.out.println(entry.getKey() + " " + entry.getValue());
-        }
+//        System.out.println("Вызов makeSalad");
+//        System.out.printf("```Готовим салатик: \n" +
+//                        "Режем - %s\n" +
+//                        "Угощайся!```", makeSalad(fruitBasketWithHashMap).getName());
+//        makeSalad(vegetableBasketWithHashMap);
     }
 
     public static String getFlag(String[] args) {
@@ -132,13 +120,9 @@ public class Simulation {
         return maxPrice;
     }
 
-    public static <T extends Plant> void makeSalad(BasketWithHashMap<T> basketWithHashMap) {
-        StringBuilder plants = new StringBuilder();
+    public static <T> void makeSalad(BasketWithHashMap<T> basketWithHashMap) {
         for (T key: basketWithHashMap) {
-            plants.append(key.getName()).append(" ");
+            System.out.println(key);
         }
-        System.out.printf("```Готовим салатик: \n" +
-                        "Режем - %s\n" +
-                        "Угощайся!```\n", plants);
     }
 }
