@@ -8,6 +8,7 @@ import task2_66.com.fruitbase.fruits.Apple;
 import task2_66.com.fruitbase.fruits.Banana;
 import task2_66.com.fruitbase.fruits.Orange;
 import task2_66.com.fruitbase.vegetables.Cucumber;
+import task2_66.com.fruitbase.vegetables.Tomato;
 import task2_66.com.interfaces.Fruit;
 import task2_66.com.interfaces.Plant;
 import task2_66.com.interfaces.Vegetable;
@@ -65,6 +66,7 @@ public class Simulation {
         Banana banana = new Banana(35.0, new BigDecimal("500"), "Banana");
         Orange orange = new Orange(30.0, new BigDecimal("550"), "Orange");
         Cucumber cucumber = new Cucumber("Огурец");
+        Tomato tomato = new Tomato("Помидор");
         System.out.println("cucumber name: " + cucumber.getName());
         System.out.println("apple name: " + apple.getName());
         Basket<Fruit> fruitBasket = new Basket<>();
@@ -95,11 +97,15 @@ public class Simulation {
         }
 
         ////////// task 7.9.1 /////////////////
+        ArrayList<String> fruitNames = new ArrayList<>();
         List<Fruit> multiFruit = plants.stream()
                 .filter(el -> el instanceof Fruit)
                 .map(el -> (Fruit) el)
                 .collect(Collectors.toList());
-        System.out.println("multiFruit: " + multiFruit.get(0).getName());
+        for (Fruit fruit: multiFruit) {
+            fruitNames.add(fruit.getName());
+        }
+        System.out.println("multiFruit: " + fruitNames);
     }
 
     public static String getFlag(String[] args) {
