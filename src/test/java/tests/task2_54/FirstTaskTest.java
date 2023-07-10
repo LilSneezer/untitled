@@ -1,4 +1,4 @@
-package tests;
+package tests.task2_54;
 
 
 import jdk.jfr.Description;
