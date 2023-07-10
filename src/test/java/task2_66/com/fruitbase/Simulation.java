@@ -5,8 +5,10 @@ import task2_66.com.customers.Customer;
 import task2_66.com.customers.FreshCustomer;
 import task2_66.com.customers.UniqueCustomer;
 import task2_66.com.fruitbase.fruits.Apple;
+import task2_66.com.fruitbase.fruits.Banana;
 import task2_66.com.fruitbase.fruits.Orange;
 import task2_66.com.fruitbase.vegetables.Cucumber;
+import task2_66.com.fruitbase.vegetables.Tomato;
 import task2_66.com.interfaces.Fruit;
 import task2_66.com.interfaces.Plant;
 import task2_66.com.interfaces.Vegetable;
@@ -14,9 +16,12 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Simulation {
+
     public static void main(String[] args) {
 
         if (args.length == 0) {
@@ -58,8 +63,10 @@ public class Simulation {
 
         ////////////// task 7.6.1 ////////////////
         Apple apple = new Apple(30.0, new BigDecimal("500"), "Голден");
+        Banana banana = new Banana(35.0, new BigDecimal("500"), "Banana");
         Orange orange = new Orange(30.0, new BigDecimal("550"), "Orange");
         Cucumber cucumber = new Cucumber("Огурец");
+        Tomato tomato = new Tomato("Помидор");
         System.out.println("cucumber name: " + cucumber.getName());
         System.out.println("apple name: " + apple.getName());
         Basket<Fruit> fruitBasket = new Basket<>();
@@ -78,15 +85,27 @@ public class Simulation {
         /////////// task 7.6.3 ////////////////
         ArrayList<Plant> plants = new ArrayList<>();
         plants.add(apple);
+        plants.add(banana);
         plants.add(cucumber);
-        HashMap<String, String> plantsMap = new HashMap<>();
+        HashMap<String, Plant> plantsMap = new HashMap<>();
         for (Plant plant: plants) {
-            plantsMap.put(plant.getName(), plant.getClass().getSimpleName());
+            plantsMap.put(plant.getName(), plant);
         }
         System.out.println("Задание 3");
-        for (Map.Entry<String, String> entry: plantsMap.entrySet()) {
-            System.out.println(entry.getKey() + " " + entry.getValue());
+        for (Map.Entry<String, Plant> entry: plantsMap.entrySet()) {
+            System.out.println(entry.getKey() + " " + entry.getValue().getClass().getSimpleName());
         }
+
+        ////////// task 7.9.1 /////////////////
+        ArrayList<String> fruitNames = new ArrayList<>();
+        List<Fruit> multiFruit = plants.stream()
+                .filter(el -> el instanceof Fruit)
+                .map(el -> (Fruit) el)
+                .collect(Collectors.toList());
+        for (Fruit fruit: multiFruit) {
+            fruitNames.add(fruit.getName());
+        }
+        System.out.println("multiFruit: " + fruitNames);
     }
 
     public static String getFlag(String[] args) {
