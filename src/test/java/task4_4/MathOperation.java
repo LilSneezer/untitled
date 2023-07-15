@@ -16,16 +16,23 @@ public class MathOperation {
             System.exit(1);
         }
 
-        String operationName = checkOperationName(args);
-        Function operationObject = createOperationObject(operationName);
+        Function operationObject = null;
+
+        try {
+            String operationName = checkOperationName(args[0]);
+            operationObject = createOperationObject(operationName);
+        } catch (Exception ex) {
+            System.exit(1);
+        }
 
         if (operationObject != null) {
+            System.out.println("operation" + operationObject);
             System.out.println(numbers);
             System.out.println(applyFunction(numbers, operationObject));
         }
     }
 
-    static ArrayList<Integer> applyFunction(ArrayList<Integer> numbs, Function func) {
+    public static ArrayList<Integer> applyFunction(ArrayList<Integer> numbs, Function func) {
         ArrayList<Integer> functionResult = new ArrayList<>();
         for (int el: numbs) {
             functionResult.add(func.evaluate(el));
@@ -33,20 +40,20 @@ public class MathOperation {
         return functionResult;
     }
 
-    static String checkOperationName(String[] args) {
-        if (args.length == 0 || args[0].matches("[0-9]")) {
+    public static String checkOperationName(String operation) throws RuntimeException {
+        if (operation.equals("") || operation.matches("[0-9]")) {
             System.out.println("Не передано название операции.");
-            System.exit(1);
+            throw new RuntimeException("Не передано название операции.");
         }
-        if (!(args[0].equals("Half") || args[0].equals("Double")
-                || args[0].equals("Exact") || args[0].equals("Square") || args[0].equals("Wave") || args[0].equals("SquareEven"))) {
-            System.out.printf("Операция %s не поддерживается.", args[0]);
-            System.exit(1);
+        if (!(operation.equals("Half") || operation.equals("Double")
+                || operation.equals("Exact") || operation.equals("Square") || operation.equals("Wave") || operation.equals("SquareEven"))) {
+            System.out.printf("Операция %s не поддерживается.", operation);
+            throw new RuntimeException("Операция %s не поддерживается.");
         }
-        return args[0];
+        return operation;
     }
 
-    static Function createOperationObject(String operationName) {
+    public static Function createOperationObject(String operationName) {
         if (operationName.equals("Half")) {
             return new Half();
         }
