@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:task7_9_1" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="55fc4241-f6d1-456d-9981-9d471ca4e1bc" name="Default Changelist" comment="Индивид. задание 10.3(1)&#10;&#10;Add gradle files">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/task2_66/com/fruitbase/BasketWithHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/task2_66/com/fruitbase/BasketWithHashMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/task2_66/com/fruitbase/vegetables/Cucumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/task2_66/com/fruitbase/vegetables/Cucumber.java" afterDir="false" />
+    </list>
+    <list id="b7351eda-0cef-4eeb-839c-c9e3c0522cb8" name="Индивид. задание 7.9.1" comment="черри пик" />
+    <list id="33ccf75b-fbbc-43f0-93fe-e894ad07a40d" name="Исправлены замечания" comment="Исправлены замечания">
+      <changelist_data name="Andrew" email="lilsneezer87@gmail.com" date="1679250115000" />
+    </list>
+    <list id="ba67613c-4e58-408f-a4ab-7610cd8abcd9" name="Правки 7.6.2" comment="Правки 7.6.2&#10;&#10;(cherry picked from commit 7336d9c8132ccbae58ea114fecd49f1ff6785ad3)" />
+    <list id="fb4124f6-7025-45e2-bfb4-f63bdc1ef703" name="Правки 7.9.1. Исправил тип multiFruit" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="untitled" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="task10_3(2)" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="11" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="11" />
+  </component>
+  <component name="ProjectId" id="2Ig6zjlOPfwOr6WDm0kY5czBD9F" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.24367817" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="task10_3_2.alchemy" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/test/java" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/test" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.tests.task2_54 in untitled.test">
+    <configuration name="Alchemy" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="task3_10.Alchemy" />
+      <module name="untitled" />
+      <option name="PROGRAM_PARAMETERS" value="Water Air Water Fire Water Earth Water Energy Air Rain" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="task3_10.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FruitBase" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="task2_66.com.fruitbase.FruitBase" />
+      <module name="untitled" />
+      <option name="PROGRAM_PARAMETERS" value="Orange Apple Blueberry Grape Pineapple" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="task2_66.com.fruitbase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Issue1" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="task2_54.Issue1" />
+      <module name="untitled" />
+      <option name="PROGRAM_PARAMETERS" value="Ц" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="task2_54.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Issue1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="task2_54.Issue1" />
+      <module name="untitled.test" />
+      <option name="PROGRAM_PARAMETERS" value="Ц" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="task2_54.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Simulation" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="task2_66.com.fruitbase.Simulation" />
+      <module name="untitled" />
+      <option name="PROGRAM_PARAMETERS" value="Orange Orange Apple Banana Pineapple Apple Mango Mango Kiwi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="task2_66.com.fruitbase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FourthTaskTest.checkOperationNameDoesNotPass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.task2_54.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.task2_54" />
+      <option name="MAIN_CLASS_NAME" value="tests.task2_54.FourthTaskTest" />
+      <option name="METHOD_NAME" value="checkOperationNameDoesNotPass" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FourthTaskTest.checkOperationNameDoesNotSupport" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.task2_54.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.task2_54" />
+      <option name="MAIN_CLASS_NAME" value="tests.task2_54.FourthTaskTest" />
+      <option name="METHOD_NAME" value="checkOperationNameDoesNotSupport" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FourthTaskTest.getErrorInCheckingOperationName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.task2_54.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.task2_54" />
+      <option name="MAIN_CLASS_NAME" value="tests.task2_54.FourthTaskTest" />
+      <option name="METHOD_NAME" value="getErrorInCheckingOperationName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FourthTaskTest.passCorrectOperationName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.task2_54.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.task2_54" />
+      <option name="MAIN_CLASS_NAME" value="tests.task2_54.FourthTaskTest" />
+      <option name="METHOD_NAME" value="passCorrectOperationName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tests.task2_54 in untitled.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.task2_54.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.task2_54" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Alchemy" />
+      <item itemvalue="Application.FruitBase" />
+      <item itemvalue="Application.Issue1" />
+      <item itemvalue="Application.Simulation" />
+      <item itemvalue="JUnit.FourthTaskTest.getErrorInCheckingOperationName" />
+      <item itemvalue="JUnit.FourthTaskTest.checkOperationNameDoesNotSupport" />
+      <item itemvalue="JUnit.FourthTaskTest.checkOperationNameDoesNotPass" />
+      <item itemvalue="JUnit.FourthTaskTest.passCorrectOperationName" />
+      <item itemvalue="JUnit.tests.task2_54 in untitled.test" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.tests.task2_54 in untitled.test" />
+        <item itemvalue="JUnit.FourthTaskTest.passCorrectOperationName" />
+        <item itemvalue="JUnit.FourthTaskTest.checkOperationNameDoesNotPass" />
+        <item itemvalue="JUnit.FourthTaskTest.checkOperationNameDoesNotSupport" />
+        <item itemvalue="JUnit.FourthTaskTest.getErrorInCheckingOperationName" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="55fc4241-f6d1-456d-9981-9d471ca4e1bc" name="Default Changelist" comment="" />
+      <changelist id="fb4124f6-7025-45e2-bfb4-f63bdc1ef703" name="Правки 7.9.1. Исправил тип multiFruit" comment="" />
+      <created>1670591146348</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670591146348</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Сделал индивид. задание 2.66">
+      <created>1678627555861</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1678627555861</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Исправлены замечания по ПРу">
+      <created>1678725062857</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1678725062857</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Исправлены замечания по ПРу">
+      <created>1678727835714</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1678727835714</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Исправлены замечания">
+      <created>1679250115378</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1679250115378</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Исправлены замечания 2.58">
+      <created>1679251924616</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1679251924616</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Индивид задание 2.75">
+      <created>1680016464401</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1680016464401</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Индивид задание 3.10&#10;Создал основные классы">
+      <created>1680647470836</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1680647470836</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Правки по ПРу">
+      <created>1681137537835</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1681137537836</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Первая задача из индивид. задания 3.10">
+      <created>1681663630545</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1681663630545</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Правки по ПРу + исправил ошибку в методе takeFruits в классе UniqueCustomer">
+      <created>1681673916713</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1681673916713</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Индивид. задание 4.4, задача 1">
+      <created>1681840598979</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1681840598979</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Индивид. задание 4.4, задача 2">
+      <created>1681845623995</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1681845623995</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Поправил замечания по ПРу">
+      <created>1682017698152</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1682017698152</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Поправил замечания по ПРу">
+      <created>1682018107456</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1682018107456</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Поправил замечания по ПРу">
+      <created>1682278065150</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1682278065154</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Индивид задание 5.6">
+      <created>1682683644718</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1682683644718</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Правки по ПРу">
+      <created>1683057159209</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1683057159209</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Правки по ПРу">
+      <created>1683383533334</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1683383533334</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Правки по ПРу">
+      <created>1683384905336</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1683384905336</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Индивид. задание 6.4 (1)">
+      <created>1683639798680</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1683639798680</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Индивид. задание 6.4 (2)">
+      <created>1683658346971</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1683658346971</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Правки по ПРу">
+      <created>1683975860937</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1683975860937</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Индивид. задание 7.6 (1)">
+      <created>1684788487360</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1684788487360</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Индивид. задание 7.6 (1)">
+      <created>1684788521584</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1684788521584</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Индивид. задание 7.6 (2)">
+      <created>1685269379770</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1685269379770</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Индивид. задание 7.6 (3)">
+      <created>1685271071892</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1685271071892</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Правки по ПРу 7.6 (3)">
+      <created>1685910093501</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1685910093501</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Правки по ПРу 7.6 (2)">
+      <created>1685974136315</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1685974136315</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Индивид. задание 7.9.1">
+      <created>1686235063526</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1686235063535</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Правки 7.6.2">
+      <created>1686920915041</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1686920915042</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Правки 7.6.2">
+      <created>1687031995815</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1687031995815</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Правки 7.9.1. Исправил тип multiFruit">
+      <created>1687110489088</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1687110489088</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Правки 7.6.2">
+      <created>1687117912538</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1687117912539</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Merge remote-tracking branch 'origin/task7_6_3' into task7_9_1&#10;&#10;# Conflicts:&#10;#&#9;src/test/java/task2_66/com/fruitbase/Simulation.java">
+      <created>1687468615927</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1687468615927</updated>
+    </task>
+    <task id="LOCAL-00056" summary="черри пик">
+      <created>1687469820960</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1687469820960</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Правки 7.6.2&#10;&#10;(cherry picked from commit 7336d9c8132ccbae58ea114fecd49f1ff6785ad3)">
+      <created>1687470612217</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1687470612217</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Правки 7.6.2&#10;&#10;(cherry picked from commit a692a30dcb33193a100f39c4184c88a95b833a56)">
+      <created>1687470652913</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1687470652913</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Правки 7.6.2&#10;&#10;(cherry picked from commit a692a30dcb33193a100f39c4184c88a95b833a56)">
+      <created>1687470977240</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1687470977240</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Правки 7.6.2&#10;&#10;(cherry picked from commit a692a30dcb33193a100f39c4184c88a95b833a56)">
+      <created>1687471223784</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1687471223784</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Индивид. задание 7.6 (3)&#10;&#10;(cherry picked from commit bad994a95b025e1d467b97bae5df8e5b590f9298)">
+      <created>1687471391629</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1687471391629</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Индивид. задание 7.9.1">
+      <created>1687471722070</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1687471722070</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Правки 7.6.2&#10;&#10;(cherry picked from commit a692a30dcb33193a100f39c4184c88a95b833a56)">
+      <created>1687471890236</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1687471890236</updated>
+    </task>
+    <task id="LOCAL-00064" summary="черри пик">
+      <created>1687553441638</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1687553441639</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Индивид. задание 7.9.1">
+      <created>1687553797731</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1687553797731</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Индивид. задание 7.9">
+      <created>1687959160631</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1687959160631</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Индивид. задание 10.3(1)&#10;&#10;Добавил Gradle и JUnit&#10;Изменил задание 2.54(1)&#10;Сделал тесты для задания 2.54(1)">
+      <created>1688969466094</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1688969466094</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Индивид. задание 10.3(1)&#10;&#10;Изменил задание 2.54(2)&#10;Сделал тесты для задания 2.54(2)&#10;Переместил файл FirstTaskTest в подпапку task2_54">
+      <created>1688990983472</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1688990983472</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Индивид. задание 10.3(1)&#10;&#10;Внес изменения в задание 4.4(1)&#10;Сделал тесты для задания 4.4(1)">
+      <created>1689445433551</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1689445433551</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Индивид. задание 10.3(2)">
+      <created>1690376548416</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1690376548417</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="task7_9_1" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Индивид. задание 4.4, задача 2" />
+    <MESSAGE value="Поправил замечания по ПРу" />
+    <MESSAGE value="Индивид задание 5.6" />
+    <MESSAGE value="Индивид. задание 6.4 (1)" />
+    <MESSAGE value="Индивид. задание 6.4 (2)" />
+    <MESSAGE value="Правки по ПРу" />
+    <MESSAGE value="Индивид. задание 7.6 (1)" />
+    <MESSAGE value="Индивид. задание 7.6 (2)" />
+    <MESSAGE value="Индивид. задание 7.6 (3)" />
+    <MESSAGE value="Правки по ПРу 7.6 (3)" />
+    <MESSAGE value="Правки по ПРу 7.6 (2)" />
+    <MESSAGE value="Правки 7.9.1. Исправил тип multiFruit" />
+    <MESSAGE value="Правки 7.6.2" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/task7_6_3' into task7_9_1&#10;&#10;# Conflicts:&#10;#&#9;src/test/java/task2_66/com/fruitbase/Simulation.java" />
+    <MESSAGE value="Правки 7.6.2&#10;&#10;(cherry picked from commit 7336d9c8132ccbae58ea114fecd49f1ff6785ad3)" />
+    <MESSAGE value="Индивид. задание 7.6 (3)&#10;&#10;(cherry picked from commit bad994a95b025e1d467b97bae5df8e5b590f9298)" />
+    <MESSAGE value="Правки 7.6.2&#10;&#10;(cherry picked from commit a692a30dcb33193a100f39c4184c88a95b833a56)" />
+    <MESSAGE value="черри пик" />
+    <MESSAGE value="Индивид. задание 7.9.1" />
+    <MESSAGE value="Индивид. задание 7.9" />
+    <MESSAGE value="Индивид. задание 10.3(1)&#10;&#10;Добавил Gradle и JUnit&#10;Изменил задание 2.54(1)&#10;Сделал тесты для задания 2.54(1)" />
+    <MESSAGE value="Индивид. задание 10.3(1)&#10;&#10;Изменил задание 2.54(2)&#10;Сделал тесты для задания 2.54(2)&#10;Переместил файл FirstTaskTest в подпапку task2_54" />
+    <MESSAGE value="Индивид. задание 10.3(1)&#10;&#10;Внес изменения в задание 4.4(1)&#10;Сделал тесты для задания 4.4(1)" />
+    <MESSAGE value="Индивид. задание 10.3(2)" />
+    <MESSAGE value="Индивид. задание 10.3(1)&#10;&#10;Add gradle files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Индивид. задание 10.3(1)&#10;&#10;Add gradle files" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="229" y="92" width="1071" height="754" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1690061148069">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state x="297" y="48" width="1071" height="778" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.820@0.25.1440.820" timestamp="1683975625954" />
+    <state x="229" y="92" width="1071" height="754" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.821@0.25.1440.821" timestamp="1690061148069" />
+    <state x="533" y="139" key="#com.intellij.ide.util.MemberChooser" timestamp="1684788139048">
+      <screen x="0" y="25" width="1440" height="820" />
+    </state>
+    <state x="533" y="139" key="#com.intellij.ide.util.MemberChooser/0.25.1440.820@0.25.1440.820" timestamp="1684788139048" />
+    <state x="455" y="128" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1688562337677">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state x="455" y="128" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.25.1440.821@0.25.1440.821" timestamp="1688562337677" />
+    <state x="494" y="308" width="452" height="262" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1690063448087">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state x="494" y="308" width="452" height="262" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.25.1440.821@0.25.1440.821" timestamp="1690063448087" />
+    <state x="938" y="261" key="#xdebugger.evaluate" timestamp="1689977553398">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state x="897" y="268" key="#xdebugger.evaluate/0.25.1440.820@0.25.1440.820" timestamp="1683382607979" />
+    <state x="938" y="261" key="#xdebugger.evaluate/0.25.1440.821@0.25.1440.821" timestamp="1689977553398" />
+    <state x="467" y="283" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1684693748400">
+      <screen x="0" y="25" width="1440" height="820" />
+    </state>
+    <state x="467" y="283" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.25.1440.820@0.25.1440.820" timestamp="1684693748400" />
+    <state x="413" y="25" width="831" height="820" key="CommitChangelistDialog2" timestamp="1690376548021">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state x="245" y="25" width="831" height="820" key="CommitChangelistDialog2/0.25.1440.820@0.25.1440.820" timestamp="1686650274112" />
+    <state x="413" y="25" key="CommitChangelistDialog2/0.25.1440.821@0.25.1440.821" timestamp="1690376548021" />
+    <state width="490" height="439" key="DebuggerActiveHint" timestamp="1686997049507">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state width="490" height="439" key="DebuggerActiveHint/0.25.1440.821@0.25.1440.821" timestamp="1686997049507" />
+    <state x="144" y="92" width="1152" height="657" key="DiffContextDialog" timestamp="1687553840155">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state x="144" y="92" width="1152" height="657" key="DiffContextDialog/0.25.1440.821@0.25.1440.821" timestamp="1687553840155" />
+    <state width="1398" height="104" key="GridCell.Tab.0.bottom" timestamp="1690376678520">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state width="1398" height="283" key="GridCell.Tab.0.bottom/0.25.1440.820@0.25.1440.820" timestamp="1686666636061" />
+    <state width="1398" height="104" key="GridCell.Tab.0.bottom/0.25.1440.821@0.25.1440.821" timestamp="1690376678520" />
+    <state width="1398" height="104" key="GridCell.Tab.0.center" timestamp="1690376678520">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state width="1398" height="283" key="GridCell.Tab.0.center/0.25.1440.820@0.25.1440.820" timestamp="1686666636060" />
+    <state width="1398" height="104" key="GridCell.Tab.0.center/0.25.1440.821@0.25.1440.821" timestamp="1690376678520" />
+    <state width="1398" height="104" key="GridCell.Tab.0.left" timestamp="1690376678519">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state width="1398" height="283" key="GridCell.Tab.0.left/0.25.1440.820@0.25.1440.820" timestamp="1686666636060" />
+    <state width="1398" height="104" key="GridCell.Tab.0.left/0.25.1440.821@0.25.1440.821" timestamp="1690376678519" />
+    <state width="1398" height="104" key="GridCell.Tab.0.right" timestamp="1690376678520">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state width="1398" height="283" key="GridCell.Tab.0.right/0.25.1440.820@0.25.1440.820" timestamp="1686666636061" />
+    <state width="1398" height="104" key="GridCell.Tab.0.right/0.25.1440.821@0.25.1440.821" timestamp="1690376678520" />
+    <state width="1398" height="122" key="GridCell.Tab.1.bottom" timestamp="1690210623209">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state width="1398" height="99" key="GridCell.Tab.1.bottom/0.25.1440.820@0.25.1440.820" timestamp="1683382639844" />
+    <state width="1398" height="122" key="GridCell.Tab.1.bottom/0.25.1440.821@0.25.1440.821" timestamp="1690210623209" />
+    <state width="1398" height="122" key="GridCell.Tab.1.center" timestamp="1690210623208">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state width="1398" height="99" key="GridCell.Tab.1.center/0.25.1440.820@0.25.1440.820" timestamp="1683382639843" />
+    <state width="1398" height="122" key="GridCell.Tab.1.center/0.25.1440.821@0.25.1440.821" timestamp="1690210623208" />
+    <state width="1398" height="122" key="GridCell.Tab.1.left" timestamp="1690210623207">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state width="1398" height="99" key="GridCell.Tab.1.left/0.25.1440.820@0.25.1440.820" timestamp="1683382639842" />
+    <state width="1398" height="122" key="GridCell.Tab.1.left/0.25.1440.821@0.25.1440.821" timestamp="1690210623207" />
+    <state width="1398" height="122" key="GridCell.Tab.1.right" timestamp="1690210623208">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state width="1398" height="99" key="GridCell.Tab.1.right/0.25.1440.820@0.25.1440.820" timestamp="1683382639843" />
+    <state width="1398" height="122" key="GridCell.Tab.1.right/0.25.1440.821@0.25.1440.821" timestamp="1690210623208" />
+    <state x="308" y="182" key="IDE.errors.dialog" timestamp="1682277722935">
+      <screen x="0" y="25" width="1440" height="820" />
+    </state>
+    <state x="308" y="182" key="IDE.errors.dialog/0.25.1440.820@0.25.1440.820" timestamp="1682277722935" />
+    <state x="258" y="94" key="Maven.ArtifactSearchDialog" timestamp="1689797380473">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state x="258" y="94" key="Maven.ArtifactSearchDialog/0.25.1440.821@0.25.1440.821" timestamp="1689797380473" />
+    <state x="148" y="113" key="MergeDialog" timestamp="1687553788940">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state x="148" y="113" key="MergeDialog/0.25.1440.821@0.25.1440.821" timestamp="1687553788940" />
+    <state x="290" y="79" key="MultipleFileMergeDialog" timestamp="1687553788978">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state x="290" y="79" key="MultipleFileMergeDialog/0.25.1440.821@0.25.1440.821" timestamp="1687553788978" />
+    <state x="349" y="25" width="1024" height="821" key="SettingsEditor" timestamp="1690375483201">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state x="349" y="25" width="1024" height="821" key="SettingsEditor/0.25.1440.821@0.25.1440.821" timestamp="1690375483201" />
+    <state x="557" y="137" key="VCS.ChangeListViewerDialog" timestamp="1689063320236">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state x="557" y="137" key="VCS.ChangeListViewerDialog/0.25.1440.821@0.25.1440.821" timestamp="1689063320236" />
+    <state x="417" y="333" key="VCS.ChangelistChooser" timestamp="1687471991487">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state x="417" y="333" key="VCS.ChangelistChooser/0.25.1440.821@0.25.1440.821" timestamp="1687471991487" />
+    <state x="320" y="171" key="Vcs.Push.Dialog.v2" timestamp="1689690170401">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state x="320" y="171" key="Vcs.Push.Dialog.v2/0.25.1440.820@0.25.1440.820" timestamp="1685976232549" />
+    <state x="320" y="171" key="Vcs.Push.Dialog.v2/0.25.1440.821@0.25.1440.821" timestamp="1689690170401" />
+    <state width="720" height="410" key="XDebugger.FullValuePopup" timestamp="1686997048756">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state width="720" height="410" key="XDebugger.FullValuePopup/0.25.1440.821@0.25.1440.821" timestamp="1686997048756" />
+    <state x="521" y="352" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1688570132872">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state x="521" y="352" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.820@0.25.1440.820" timestamp="1684692725677" />
+    <state x="521" y="352" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.821@0.25.1440.821" timestamp="1688570132872" />
+    <state x="421" y="25" width="597" height="820" key="find.popup" timestamp="1681843486645">
+      <screen x="0" y="25" width="1440" height="820" />
+    </state>
+    <state x="421" y="25" width="597" height="820" key="find.popup/0.25.1440.820@0.25.1440.820" timestamp="1681843486645" />
+    <state x="468" y="151" key="git4idea.branch.GitSmartOperationDialog" timestamp="1688562222491">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state x="468" y="151" key="git4idea.branch.GitSmartOperationDialog/0.25.1440.820@0.25.1440.820" timestamp="1686650256231" />
+    <state x="468" y="151" key="git4idea.branch.GitSmartOperationDialog/0.25.1440.821@0.25.1440.821" timestamp="1688562222491" />
+    <state x="126" y="85" key="new project wizard" timestamp="1690375153547">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state x="126" y="85" key="new project wizard/0.25.1440.821@0.25.1440.821" timestamp="1690375153547" />
+    <state x="468" y="361" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog" timestamp="1690147352544">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state x="468" y="361" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog/0.25.1440.821@0.25.1440.821" timestamp="1690147352544" />
+    <state x="420" y="215" key="refactoring.ChangeSignatureDialog" timestamp="1689444176657">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state x="420" y="215" key="refactoring.ChangeSignatureDialog/0.25.1440.821@0.25.1440.821" timestamp="1689444176657" />
+    <state x="385" y="196" key="run.anything.popup" timestamp="1686650512969">
+      <screen x="0" y="25" width="1440" height="820" />
+    </state>
+    <state x="385" y="196" key="run.anything.popup/0.25.1440.820@0.25.1440.820" timestamp="1686650512969" />
+    <state x="385" y="167" width="670" height="679" key="search.everywhere.popup" timestamp="1690058654153">
+      <screen x="0" y="25" width="1440" height="821" />
+    </state>
+    <state x="385" y="167" width="670" height="679" key="search.everywhere.popup/0.25.1440.821@0.25.1440.821" timestamp="1690058654153" />
+  </component>
+</project>
